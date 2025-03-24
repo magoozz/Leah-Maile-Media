@@ -1,6 +1,4 @@
 "use client"
-
-import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 export default function Experience() {
