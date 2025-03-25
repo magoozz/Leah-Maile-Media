@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Navigation from "../components/Navigation"; // Move client logic here
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Leah Maile Media",
@@ -23,6 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body>
       <Navigation />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

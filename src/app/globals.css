@@ -1,27 +1,20 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Wonderful Branding";
+  src: url("/fonts/WonderfulBranding.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/*
+ cream background: #dad7cd
+ olive green: #506248
+ pink: #fadadd
+*/
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #dad7cd;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -29,9 +22,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111; /* Adjust as needed */
+  background-color: #dad7cd;
+  /* Adjust as needed */
   padding: 1rem 2rem;
-  color: white;
+  color: #506248;
 }
 
 .nav-left h1 {
@@ -45,7 +39,7 @@ body {
 }
 
 .nav-links li a {
-  color: white;
+  color: #506248;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -78,7 +72,116 @@ body {
 }
 
 .social-icons a {
-  color: white;
+  color: #506248;
   font-size: 1.5rem;
 }
 
+.home {
+
+  .images {
+    position: relative;
+    width: 100%;
+    height: 50vw;
+    overflow: hidden;
+  }
+
+  .transition-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .transition-image.active {
+    opacity: 1;
+  }
+
+  .services {
+    margin: 2rem 0;
+
+    .services-title {
+      text-align: center;
+    }
+
+    .services-bottom {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .services-content {
+        p {
+          font-family: "Wonderful Branding", sans-serif;
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    background: linear-gradient(90deg,
+        #e8e3db 50%,
+        #bfbfbf 50%);
+    background-size: 40px 40px;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+    .testimonial-item {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      width: 90vw;
+      max-width: 59.375rem;
+      background-image: url('/images/postcard.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      aspect-ratio: 16 / 9;
+
+      .stamp {
+        position: absolute;
+        top: -1%;
+        right: 14%;
+        width: 15%;
+        max-width: 10rem;
+        aspect-ratio: 1/1;
+      }
+
+      .postcard-text {
+        position: absolute;
+        top: 26%;
+        left: 17%;
+        font-size: 1.2rem;
+        font-size: clamp(0.6rem, 2vw, 1.2rem);
+        line-height: 1.4;
+        max-width: 32%; 
+      }
+
+      .signature {
+        position: absolute;
+        top: 68%; 
+        left: 24%; 
+        width: 30%; 
+        max-width: 250px; 
+        aspect-ratio: 3/1; 
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #506248;
+  height: 15%;
+
+  .footer-content {
+    text-align: center;
+  }
+}

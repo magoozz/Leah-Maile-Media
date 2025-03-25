@@ -1,16 +1,8 @@
 "use client";
-
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaBook, FaEnvelope } from "react-icons/fa";
 
 export default function Navigation() {
-  const pathname = usePathname();
-
-  const isHidden = ["/microservice", "/blackbaud", "/christman"].some((path) =>
-    pathname.startsWith(path)
-  );
-  if (isHidden) return null;
 
   return (
     <nav className="nav-container">
