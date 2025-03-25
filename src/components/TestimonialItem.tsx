@@ -29,7 +29,7 @@ export default function TestimonialItem({
       className="testimonial-item col-md-10"
     >
       <div className="stamp">
-        <Image src={stamp} alt={stampAlt} width={160} height={160} />
+        <Image src={stamp} alt={stampAlt} width={200} height={200} />
       </div>
       <div className="postcard-text col-md-4">
         <p>{text}</p>

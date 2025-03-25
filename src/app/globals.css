@@ -23,7 +23,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #dad7cd;
-  /* Adjust as needed */
   padding: 1rem 2rem;
   color: #506248;
 }
@@ -132,14 +131,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
+
+    @media (max-width: 790px) {
+      height: 50vh;
+    }
 
     .testimonial-item {
       position: relative;
       aspect-ratio: 16 / 9;
       width: 90vw;
-      max-width: 59.375rem;
+      max-width: 60.375rem;
       background-image: url('/images/postcard.svg');
       background-size: contain;
       background-position: center;
@@ -150,28 +153,39 @@ body {
         position: absolute;
         top: -1%;
         right: 14%;
-        width: 15%;
-        max-width: 10rem;
+        width: 18%;
+        max-width: 12.5rem;
         aspect-ratio: 1/1;
       }
 
       .postcard-text {
         position: absolute;
         top: 26%;
-        left: 17%;
+        left: 20%;
         font-size: 1.2rem;
         font-size: clamp(0.6rem, 2vw, 1.2rem);
         line-height: 1.4;
-        max-width: 32%; 
+        max-width: 29%;
+
+        @media (max-width: 790px) {
+          p {
+            font-size: -1.2rem;
+          }
+        }
       }
 
       .signature {
         position: absolute;
-        top: 68%; 
-        left: 24%; 
-        width: 30%; 
-        max-width: 250px; 
-        aspect-ratio: 3/1; 
+        top: 63%;
+        left: 23%;
+        width: 30%;
+        max-width: 250px;
+        aspect-ratio: 3/1;
+
+        @media (max-width: 790px) {
+          left: 50%;
+          top: 67%;
+        }
       }
     }
   }

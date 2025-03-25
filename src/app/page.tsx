@@ -1,9 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./globals.css";
 import TestimonialItem from "../components/TestimonialItem";
+import { AnimatePresence } from "framer-motion"; // Import AnimatePresence
+
+const images = [
+  "/images/clif.jpg",
+  "/images/grad_1.jpg",
+  "/images/emily_leaf.jpg",
+  "/images/aj_1.jpg",
+];
 
 const testimonials = [
   {
@@ -22,28 +30,88 @@ const testimonials = [
   },
   {
     text: "I was so happy to have worked with Leah when getting my college graduation photos taken. She made the whole process fun and the pictures turned out exactly how I wanted them to!",
-    stamp: "/images/stamp-molly.svg",
-    stampAlt: "Image of Molly smiling",
-    signature: "/images/signature-molly.svg",
-    signatureAlt: "Heart Molly",
+    stamp: "/images/stamp-aj.svg",
+    stampAlt: "Image of AJ smiling",
+    signature: "/images/signature-aj.svg",
+    signatureAlt: "Dash AJ",
+  },
+  {
+    text: "Leah is AMAZING! She made me feel so comfortable during my grad session, and I absolutely loved how my photos turned out! Leah is the best at capturing your happiest moments! I would recommend her again and again :-)",
+    stamp: "/images/stamp-sidney.svg",
+    stampAlt: "Image of Sidney smiling",
+    signature: "/images/signature-sidney.svg",
+    signatureAlt: "Heart Sidney",
+  },
+  {
+    text: "Leah is one of my favorite photographers to work with! She makes you feel so comfortable and allows you to be YOU in your photos which is amazing! She was so fun to work with, and did an incredible job with my photos!! You will not be disappointed!!",
+    stamp: "/images/stamp-emily.svg",
+    stampAlt: "Image of Haley smiling",
+    signature: "/images/signature-haley.svg",
+    signatureAlt: "Heart Haley",
+  },
+  {
+    text: "Leah knows how to make you feel like your best friend is behind the camera. Shes able to capture your natural beauty by making you smile! Taking photos with Leah is capturing your happiest moments in their truest form.",
+    stamp: "/images/stamp-megan.svg",
+    stampAlt: "Image of Megan smiling",
+    signature: "/images/signature-megan.svg",
+    signatureAlt: "Heart Megan",
   },
 ];
 
 export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0); // Declare the missing state for current image
   const [direction, setDirection] = useState(1); // Tracks slide direction
 
+  // Change testimonial every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setDirection(1); // Always slide to the right
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 7000); // Change testimonial every 5 seconds
+    }, 8500); // Change testimonial every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
+  // Change image every 4 seconds
+  useEffect(() => {
+    const imageInterval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 8500); // Change every 4 seconds
+
+    return () => clearInterval(imageInterval);
+  }, []);
+
   return (
     <div className="home col-md-12">
+      <div className="images">
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className={`transition-image ${index === currentImage ? "active" : ""}`}
+            style={{ backgroundImage: `url(${src})` }}
+          ></div>
+        ))}
+      </div>
+
+      <div className="services">
+        <div className="services-top">
+          <h1 className="services-title">Lifestyle photographer based in WA state</h1>
+        </div>
+        <div className="services-bottom">
+          <div className="services-image-cluster">
+            <Image src="/images/leahp-1.svg" alt="LeahP" width={200} height={200} />
+          </div>
+          <div className="services-content col-md-4">
+            <p>This is where I talk about my work! My name is Leah! and I love to take all sorts of pictures.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="image-break"></div>
+
+      <div className="about"></div>
+
       <div className="testimonials">
         <AnimatePresence mode="wait" custom={direction}>
           <TestimonialItem {...testimonials[currentTestimonial]} direction={direction} key={currentTestimonial} />
