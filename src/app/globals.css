@@ -178,13 +178,12 @@ body {
   }
 
   .image-break {
-
-    height: 20vw;
+    height: 30vw;
     overflow: hidden;
-    
+
     .image {
       width: 100vw;
-      height: 100vh;
+      height: 200%;
     }
   }
 
@@ -282,6 +281,7 @@ body {
 .footer {
   background-color: #506248;
   height: 15%;
+  padding-bottom: 2rem;
 
   .footer-content {
     text-align: center;

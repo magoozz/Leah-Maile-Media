@@ -101,7 +101,7 @@ export default function Home() {
             <h1>Hi I&apos;m Leah!</h1>
           </div>
           <div className="about-image-cluster-mobile">
-            <Image src="/images/leahfront.svg" alt="LeahP" width={400} height={400} />
+            <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Hlding flowers sitting next to a fern leaf and three flowers" width={400} height={400} />
           </div>
           <p>Nice to meet you, I&apos;m a photographer based out of Washington State. I am passionate about capturing those special
             moments that you will never forget! Creating an experience that allows you feel confident and happy for all occasions.
@@ -111,7 +111,7 @@ export default function Home() {
           <Link href="/about" className="button" target="_blank" rel="noopener noreferrer">Get to know me!</Link>
         </div>
         <div className="about-image-cluster col-md-6">
-          <Image src="/images/leahfront.svg" alt="LeahP" width={500} height={500} />
+          <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Hlding flowers sitting next to a fern leaf and three flowers" width={500} height={500} />
         </div>
       </div>
 
