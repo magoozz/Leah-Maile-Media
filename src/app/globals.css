@@ -11,6 +11,7 @@
  cream background: #dad7cd
  olive green: #506248
  pink: #fadadd
+ grey: #bfbfbf
 */
 
 body {
@@ -53,28 +54,6 @@ body {
   gap: 1rem;
 }
 
-.resume-button {
-  background-color: #444;
-  color: white;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.resume-button:hover {
-  background-color: #666;
-}
-
-.social-icons {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-icons a {
-  color: #506248;
-  font-size: 1.5rem;
-}
-
 .home {
 
   .images {
@@ -100,95 +79,153 @@ body {
     opacity: 1;
   }
 
-  .services {
-    margin: 2rem 0;
+  .about {
+    background-color: #bfbfbf;
+    padding-top: 2rem;
 
-    .services-title {
-      text-align: center;
-    }
-
-    .services-bottom {
+    .about-bottom {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: space-between;
+      padding-left: 10%;
 
-      .services-content {
-        p {
-          font-family: "Wonderful Branding", sans-serif;
-        }
+      .about-content {
+        align-content: center;
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+        color: #506248;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 15px 28px;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #dad7cd;
+        background-color: #506248;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+      }
+
+      .button:hover,
+      .button:focus {
+        background-color: #6b8f5b;
+        transform: scale(1.05);
+        box-shadow:
+          inset 0 0 8px #506248,
+          0 0 10px rgba(13, 84, 70, 0.5),
+          0 0 15px rgba(6, 58, 48, 0.4);
+      }
+
+      .button:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
       }
     }
   }
 
-  .testimonials {
-    background: linear-gradient(90deg,
-        #e8e3db 50%,
-        #bfbfbf 50%);
-    background-size: 40px 40px;
-    height: 100vh;
-    width: 100%;
+}
 
+.services {
+  margin: 2rem 0;
+
+  .services-title {
+    text-align: center;
+  }
+
+  .services-bottom {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    width: 100%;
 
-    @media (max-width: 790px) {
-      height: 50vh;
-    }
-
-    .testimonial-item {
-      position: relative;
-      aspect-ratio: 16 / 9;
-      width: 90vw;
-      max-width: 60.375rem;
-      background-image: url('/images/postcard.svg');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      aspect-ratio: 16 / 9;
-
-      .stamp {
-        position: absolute;
-        top: -1%;
-        right: 14%;
-        width: 18%;
-        max-width: 12.5rem;
-        aspect-ratio: 1/1;
-      }
-
-      .postcard-text {
-        position: absolute;
-        top: 26%;
-        left: 20%;
-        font-size: 1.2rem;
-        font-size: clamp(0.6rem, 2vw, 1.2rem);
-        line-height: 1.4;
-        max-width: 29%;
-
-        @media (max-width: 790px) {
-          p {
-            font-size: -1.2rem;
-          }
-        }
-      }
-
-      .signature {
-        position: absolute;
-        top: 63%;
-        left: 23%;
-        width: 30%;
-        max-width: 250px;
-        aspect-ratio: 3/1;
-
-        @media (max-width: 790px) {
-          left: 50%;
-          top: 67%;
-        }
+    .services-content {
+      p {
+        font-family: "Wonderful Branding", sans-serif;
       }
     }
   }
+}
+
+.testimonials {
+  background: linear-gradient(90deg,
+      #e8e3db 50%,
+      #bfbfbf 50%);
+  background-size: 40px 40px;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  @media (max-width: 790px) {
+    height: 50vh;
+  }
+
+  .testimonial-item {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 90vw;
+    max-width: 60.375rem;
+    background-image: url('/images/postcard.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 9;
+
+    .stamp {
+      position: absolute;
+      top: -1%;
+      right: 14%;
+      width: 18%;
+      max-width: 12.5rem;
+      aspect-ratio: 1/1;
+    }
+
+    .postcard-text {
+      position: absolute;
+      top: 26%;
+      left: 20%;
+      font-size: 1.2rem;
+      font-size: clamp(0.6rem, 2vw, 1.2rem);
+      line-height: 1.4;
+      max-width: 29%;
+
+      @media (max-width: 790px) {
+        p {
+          font-size: -1.2rem;
+        }
+      }
+    }
+
+    .signature {
+      position: absolute;
+      top: 63%;
+      left: 23%;
+      width: 30%;
+      max-width: 250px;
+      aspect-ratio: 3/1;
+
+      @media (max-width: 790px) {
+        left: 50%;
+        top: 67%;
+      }
+    }
+  }
+}
 }
 
 .footer {

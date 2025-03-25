@@ -20,14 +20,16 @@ export default function Footer() {
                 </Link>
 
                 <Link
-            href="https://www.goodreads.com/user/show/164080752-megan-bartlett"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Good Reads"
-          >
-            <FaBook size={24} />
-          </Link>
+                    href="https://www.goodreads.com/user/show/164080752-megan-bartlett"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Good Reads"
+                >
+                    <FaBook size={24} />
+                </Link>
             </footer>
+
+            
 
             <div className="footer-content">
                 <p>&copy; {new Date().getFullYear()} Leah Maile Media. All Rights Reserved.</p>
