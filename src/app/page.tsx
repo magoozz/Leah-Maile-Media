@@ -7,7 +7,7 @@ import TestimonialItem from "../components/TestimonialItem";
 
 const testimonials = [
   {
-    text: "Leah made me feel so comfortable throughout the shoot. She is super encouraging and helped me relax, especially since I'm a bit shy. Her positive energy made the whole experience fun, and her talent for capturing special moments is amazing!",
+    text: "Leah made me feel so comfortable throughout the shoot. She is super encouraging and helped me relax, especially since I am a bit shy. Her positive energy made the whole experience fun, and her talent for capturing special moments is amazing!",
     stamp: "/images/stamp-emily.svg",
     stampAlt: "Image of Emily smiling with flowers",
     signature: "/images/signature-emily.svg",
@@ -15,6 +15,13 @@ const testimonials = [
   },
   {
     text: "Leah did an outstanding job with my college graduation photos! She is communicative, professional, and kept the entire process fun! I highly recommend Leah to anyone who is looking to get professional pictures taken!",
+    stamp: "/images/stamp-molly.svg",
+    stampAlt: "Image of Molly smiling",
+    signature: "/images/signature-molly.svg",
+    signatureAlt: "Heart Molly",
+  },
+  {
+    text: "I was so happy to have worked with Leah when getting my college graduation photos taken. She made the whole process fun and the pictures turned out exactly how I wanted them to!",
     stamp: "/images/stamp-molly.svg",
     stampAlt: "Image of Molly smiling",
     signature: "/images/signature-molly.svg",
