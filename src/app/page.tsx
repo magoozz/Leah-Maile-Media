@@ -1,25 +1,24 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./globals.css";
 import TestimonialItem from "../components/TestimonialItem";
 
 const testimonials = [
   {
-    text: "Leah made me feel so comfortable throughout the shoot. She’s super encouraging and helped me relax, especially since I'm a bit shy. Her positive energy made the whole experience fun, and her talent for capturing special moments is amazing!",
+    text: "Leah made me feel so comfortable throughout the shoot. She is super encouraging and helped me relax, especially since I'm a bit shy. Her positive energy made the whole experience fun, and her talent for capturing special moments is amazing!",
     stamp: "/images/stamp-emily.svg",
     stampAlt: "Image of Emily smiling with flowers",
     signature: "/images/signature-emily.svg",
     signatureAlt: "Heart Emily",
   },
   {
-    text: "Working with Leah was an absolute joy! She has such a calming presence that made it easy to just be myself. She captured every little moment so beautifully, and I can't stop looking at the photos!",
-    stamp: "/images/stamp-john.svg",
-    stampAlt: "Image of John smiling",
-    signature: "/images/signature-john.svg",
-    signatureAlt: "Heart John",
+    text: "Leah did an outstanding job with my college graduation photos! She is communicative, professional, and kept the entire process fun! I highly recommend Leah to anyone who is looking to get professional pictures taken!",
+    stamp: "/images/stamp-molly.svg",
+    stampAlt: "Image of Molly smiling",
+    signature: "/images/signature-molly.svg",
+    signatureAlt: "Heart Molly",
   },
 ];
 
