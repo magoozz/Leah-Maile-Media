@@ -81,20 +81,63 @@ body {
 
   .about {
     background-color: #bfbfbf;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
 
-    .about-bottom {
-      display: flex;
-      justify-content: space-between;
-      padding-left: 10%;
+    @media (max-width: 790px) {
+      padding-left: 2%;
+      padding-right: 2%;
+      flex-direction: column;
+
+      .about-image-cluster {
+        display: none;
+      }
 
       .about-content {
-        align-content: center;
+        text-align: center;
 
-      h1 {
-        font-size: 4rem;
+        .title {
+          margin-bottom: 1.5rem !important;
+          padding-top: 1rem;
+
+          h1 {
+            font-size: 3.5rem !important;
+          }
+        }
+
+        p {
+          margin-bottom: 1rem;
+          margin-top: -5rem;
+        }
+
+        .button {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .about-content {
+      align-content: center;
+
+      .title {
         margin-bottom: 3rem;
-        color: #506248;
-        font-weight: bold;
+
+        h1 {
+          font-size: 4rem;
+          color: #506248;
+          font-weight: bold;
+        }
+
+      }
+
+      .about-image-cluster-mobile {
+        display: none;
+
+        @media (max-width: 790px) {
+          display: block;
+          margin-top: -5rem;
+        }
       }
 
       p {
@@ -109,7 +152,7 @@ body {
         padding: 15px 28px;
         font-size: 1.125rem;
         font-weight: 600;
-        color: #dad7cd;
+        color: #fadadd;
         background-color: #506248;
         border-radius: 8px;
         text-decoration: none;
@@ -134,97 +177,106 @@ body {
     }
   }
 
-}
+  .image-break {
 
-.services {
-  margin: 2rem 0;
-
-  .services-title {
-    text-align: center;
-  }
-
-  .services-bottom {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    .services-content {
-      p {
-        font-family: "Wonderful Branding", sans-serif;
-      }
+    height: 20vw;
+    overflow: hidden;
+    
+    .image {
+      width: 100vw;
+      height: 100vh;
     }
   }
-}
 
-.testimonials {
-  background: linear-gradient(90deg,
-      #e8e3db 50%,
-      #bfbfbf 50%);
-  background-size: 40px 40px;
-  height: 100vh;
-  width: 100%;
+  .services {
+    margin: 2rem 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-
-  @media (max-width: 790px) {
-    height: 50vh;
-  }
-
-  .testimonial-item {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    width: 90vw;
-    max-width: 60.375rem;
-    background-image: url('/images/postcard.svg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    aspect-ratio: 16 / 9;
-
-    .stamp {
-      position: absolute;
-      top: -1%;
-      right: 14%;
-      width: 18%;
-      max-width: 12.5rem;
-      aspect-ratio: 1/1;
+    .services-title {
+      text-align: center;
     }
 
-    .postcard-text {
-      position: absolute;
-      top: 26%;
-      left: 20%;
-      font-size: 1.2rem;
-      font-size: clamp(0.6rem, 2vw, 1.2rem);
-      line-height: 1.4;
-      max-width: 29%;
+    .services-bottom {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
 
-      @media (max-width: 790px) {
+      .services-content {
         p {
-          font-size: -1.2rem;
+          font-family: "Wonderful Branding", sans-serif;
         }
       }
     }
+  }
 
-    .signature {
-      position: absolute;
-      top: 63%;
-      left: 23%;
-      width: 30%;
-      max-width: 250px;
-      aspect-ratio: 3/1;
+  .testimonials {
+    background: linear-gradient(90deg,
+        #e8e3db 50%,
+        #bfbfbf 50%);
+    background-size: 40px 40px;
+    height: 100vh;
+    width: 100%;
 
-      @media (max-width: 790px) {
-        left: 50%;
-        top: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    @media (max-width: 790px) {
+      height: 50vh;
+    }
+
+    .testimonial-item {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      width: 90vw;
+      max-width: 60.375rem;
+      background-image: url('/images/postcard.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      aspect-ratio: 16 / 9;
+
+      .stamp {
+        position: absolute;
+        top: -1%;
+        right: 14%;
+        width: 18%;
+        max-width: 12.5rem;
+        aspect-ratio: 1/1;
+      }
+
+      .postcard-text {
+        position: absolute;
+        top: 26%;
+        left: 20%;
+        font-size: 1.2rem;
+        font-size: clamp(0.6rem, 2vw, 1.2rem);
+        line-height: 1.4;
+        max-width: 29%;
+
+        @media (max-width: 790px) {
+          p {
+            font-size: -1.2rem;
+          }
+        }
+      }
+
+      .signature {
+        position: absolute;
+        top: 63%;
+        left: 23%;
+        width: 30%;
+        max-width: 250px;
+        aspect-ratio: 3/1;
+
+        @media (max-width: 790px) {
+          left: 50%;
+          top: 67%;
+        }
       }
     }
   }
-}
 }
 
 .footer {

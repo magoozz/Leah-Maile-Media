@@ -96,25 +96,28 @@ export default function Home() {
       </div>
 
       <div className="about">
-        <div className="about-bottom">
-          <div className="about-content col-md-5">
-            <div className="title">
-              <h1>Hi I&apos;m Leah!</h1>
-            </div>
-            <p>Nice to meet you, I&apos;m a photographer based out of Washington State. I am passionate about capturing those special
-              moments that you will never forget! Creating an experience that allows you feel confident and happy for all occasions.
-              I promise to create a gallery that you will always be able to look back on foundly. I look forward to meeting you and learning
-              more about whats most special to you!
-            </p>
-            <Link href="/about" className="button" target="_blank" rel="noopener noreferrer">Get to know me!</Link>
+        <div className="about-content col-md-5">
+          <div className="title">
+            <h1>Hi I&apos;m Leah!</h1>
           </div>
-          <div className="about-image-cluster col-md-6">
-            <Image src="/images/leahfront.svg" alt="LeahP" width={500} height={500} />
+          <div className="about-image-cluster-mobile">
+            <Image src="/images/leahfront.svg" alt="LeahP" width={400} height={400} />
           </div>
+          <p>Nice to meet you, I&apos;m a photographer based out of Washington State. I am passionate about capturing those special
+            moments that you will never forget! Creating an experience that allows you feel confident and happy for all occasions.
+            I promise to create a gallery that you will always be able to look back on foundly. I look forward to meeting you and learning
+            more about whats most special to you!
+          </p>
+          <Link href="/about" className="button" target="_blank" rel="noopener noreferrer">Get to know me!</Link>
+        </div>
+        <div className="about-image-cluster col-md-6">
+          <Image src="/images/leahfront.svg" alt="LeahP" width={500} height={500} />
         </div>
       </div>
 
-      <div className="image-break"></div>
+      <div className="image-break">
+        <Image className="image" src="/images/clif.jpg" alt="LeahP" width={500} height={200} />
+      </div>
 
       <div className="services">
         <div className="services-top">

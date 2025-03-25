@@ -12,10 +12,10 @@ export default function Navigation() {
       </div>
       <ul className="nav-links">
         {[
-          { label: "About", href: "/about" },
-          { label: "Experience", href: "/experience" },
-          { label: "Portfolio", href: "/portfolio" },
-          { label: "Contact", href: "/contact" },
+          { label: "A", href: "/about" },
+          { label: "E", href: "/experience" },
+          { label: "P", href: "/portfolio" },
+          { label: "C", href: "/contact" },
         ].map(({ label, href }) => (
           <li key={href}>
             <Link href={href}>{label}</Link>
