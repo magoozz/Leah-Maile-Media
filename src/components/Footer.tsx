@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import Link from "next/link";
-import { FaLinkedin, FaGithub, FaBook, FaEnvelope } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
 
 export default function Footer() {
     return (
