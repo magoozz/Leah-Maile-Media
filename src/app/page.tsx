@@ -132,7 +132,7 @@ export default function Home() {
             <Image src="/images/info2.svg" alt="LeahP" width={800} height={900} />
           </div>
           <div className="services-content col-md-4">
-            <p>If you're looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal. 
+            <p>If you&apos;re looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal. 
               I truly believe in creating connections with my clients, and it means the world to me when they say, “I feel like we&apos;re friends.” The truth is, we absolutely are. 
               I&apos;m here to capture your moments, make you feel comfortable, and help tell your story in a way that feels personal and real.</p>
           </div>
