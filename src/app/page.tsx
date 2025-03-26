@@ -103,15 +103,15 @@ export default function Home() {
           <div className="about-image-cluster-mobile">
             <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Hlding flowers sitting next to a fern leaf and three flowers" width={400} height={400} />
           </div>
-          <p>Nice to meet you, I&apos;m a photographer based out of Washington State. I am passionate about capturing those special
+          <p>Nice to meet you, I&apos;m a photographer based out of Washington State who is devoted to capturing those special
             moments that you will never forget! Creating an experience that allows you feel confident and happy for all occasions.
             I promise to create a gallery that you will always be able to look back on foundly. I look forward to meeting you and learning
             more about whats most special to you!
           </p>
           <Link href="/about" className="button" target="_blank" rel="noopener noreferrer">Get to know me!</Link>
         </div>
-        <div className="about-image-cluster col-md-6">
-          <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Hlding flowers sitting next to a fern leaf and three flowers" width={500} height={500} />
+        <div className="about-image-cluster col-md-4">
+          <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Holding flowers sitting next to a fern leaf and three flowers" width={500} height={500} />
         </div>
       </div>
 
@@ -121,14 +121,20 @@ export default function Home() {
 
       <div className="services">
         <div className="services-top">
-          <h1 className="services-title">Lifestyle photographer based in WA state</h1>
+          <div className="services-title">
+            <h2>
+              Lifestyle photographer based in WA state
+            </h2>
+          </div>
         </div>
         <div className="services-bottom">
-          <div className="services-image-cluster">
-            <Image src="/images/leahp-1.svg" alt="LeahP" width={200} height={200} />
+          <div className="services-image-cluster col-md-7">
+            <Image src="/images/info2.svg" alt="LeahP" width={800} height={900} />
           </div>
           <div className="services-content col-md-4">
-            <p>This is where I talk about my work! My name is Leah! and I love to take all sorts of pictures.</p>
+            <p>If you're looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal. 
+              I truly believe in creating connections with my clients, and it means the world to me when they say, “I feel like we&apos;re friends.” The truth is, we absolutely are. 
+              I&apos;m here to capture your moments, make you feel comfortable, and help tell your story in a way that feels personal and real.</p>
           </div>
         </div>
       </div>

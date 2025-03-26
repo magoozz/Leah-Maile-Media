@@ -9,28 +9,28 @@ import { FaBook } from "react-icons/fa";
 export default function Footer() {
     return (
         <footer className="footer">
-            <footer className="stamp">
-                <Link href="/">
-                    <Image
-                        src="/images/logo-stamp-filled.svg"
-                        alt="Leah Maile Media, EST 2018, Capturing the moment. Flower graphic"
-                        width={400} // Adjust width and height as needed
-                        height={400}
-                    />
-                </Link>
-
-                <Link
-                    href="https://www.goodreads.com/user/show/164080752-megan-bartlett"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Good Reads"
-                >
-                    <FaBook size={24} />
-                </Link>
-            </footer>
-
-            
-
+            <div className="footer-items col-md-12">
+                <div className="stamp col-md-3">
+                    <Link href="/">
+                        <Image
+                            src="/images/logo-stamp-filled.svg"
+                            alt="Leah Maile Media, EST 2018, Capturing the moment. Flower graphic"
+                            width={400} // Adjust width and height as needed
+                            height={400}
+                        />
+                    </Link>
+                </div>
+                <div className="ig">
+                    <Link
+                        href="https://www.goodreads.com/user/show/164080752-megan-bartlett"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Good Reads"
+                    >
+                        <FaBook size={24} />
+                    </Link>
+                </div>
+            </div>
             <div className="footer-content">
                 <p>&copy; {new Date().getFullYear()} Leah Maile Media. All Rights Reserved.</p>
                 <p>Developed by <Link href="https://megan-bartlett.vercel.app/" target="_blank" rel="noopener noreferrer"> Megan Bartlett</Link></p>
