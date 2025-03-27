@@ -108,9 +108,11 @@ export default function Home() {
             I promise to create a gallery that you will always be able to look back on foundly. I look forward to meeting you and learning
             more about whats most special to you!
           </p>
-          <Link href="/about" className="button">           <div className="note">
-            <Image src="/images/me.svg" alt="Get to know me note" width={400} height={400} />
-          </div></Link>
+          <Link href="/about" className="a-button">
+            <div className="note">
+              <Image src="/images/me.svg" alt="Get to know me note" width={500} height={500} />
+            </div>
+          </Link>
 
         </div>
         <div className="about-image-cluster col-md-4">
@@ -134,14 +136,20 @@ export default function Home() {
           </div>
         </div>
         <div className="services-bottom">
-          <div className="services-image-cluster col-md-6">
-            <Image src="/images/info.svg" alt="LeahP" width={900} height={900} />
+          <div className="services-image-holder col-md-6">
+            <Image src="/images/info2.svg" alt="LeahP" width={800} height={800} />
           </div>
+
+          <div className="services-image-cluster">
+            <Image src="/images/info.svg" alt="LeahP" width={1100} height={1100} />
+          </div>
+
           <div className="services-content col-md-5">
             <p>If you&apos;re looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal.
               I truly believe in creating connections with my clients, and it means the world to me when they say, “I feel like we&apos;re friends.” The truth is, we absolutely are.
               I&apos;m here to capture your moments, make you feel comfortable, and help tell your story in a way that feels personal and real.</p>
           </div>
+
         </div>
       </div>
 
@@ -161,6 +169,6 @@ export default function Home() {
           <TestimonialItem {...testimonials[currentTestimonial]} direction={direction} key={currentTestimonial} />
         </AnimatePresence>
       </div>
-    </div>
+    </div >
   );
 }

@@ -7,6 +7,11 @@
   font-style: normal;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 /*
  cream background: #dad7cd
  olive green: #506248
@@ -84,6 +89,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
 
 
     .about-image-cluster {
@@ -117,14 +123,6 @@ body {
 
           margin: -5rem 0.25rem 1rem 0.25rem;
         }
-
-        /*
-
-        .button {
-          margin-left: 0 !important;
-        }
-
-        */
       }
     }
 
@@ -154,35 +152,26 @@ body {
 
       p {
         font-size: 1.5rem;
-        margin-bottom: 3rem;
-      }
-
-      .note {
-        margin-top: 7rem;
-        margin-left: 6rem;
+        margin-bottom: 25rem;
 
         @media (max-width: 790px) {
-          margin-left: 0;
-          margin-top: -3rem;
+          margin-bottom: 3rem;
         }
       }
 
-      .button {
-        display: inline-flex;
-        align-items: center;
+      .a-button {
+        position: absolute;
+        top: 50%;
+        right: 50%;
         height: 1rem;
         padding: -3rem;
         transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
         margin-bottom: 2rem;
       }
 
-      .button:hover,
-      .button:focus {
+      .a-button:hover,
+      .a-button:focus {
         transform: scale(1.05);
-      }
-
-      .button:focus {
-        outline: none;
       }
     }
   }
@@ -191,58 +180,111 @@ body {
     height: 40vw;
     overflow: hidden;
     position: relative;
+    z-index: 1002;
   }
 
 
   .services {
     margin: 2rem 0;
     position: relative;
-    height: 50vw;
+    padding: 4rem 0 25rem 0;
+
+    @media (max-width: 790px) {
+      padding: 0;
+    }
 
     .services-top {
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .services-title {
       text-align: center;
+      margin-bottom: 3rem;
 
       h2 {
-        font-size: 3.5rem;
+        font-size: clamp(2rem, 4vw, 3.5rem);
         color: #506248;
         font-weight: bold;
+        margin: 0 auto;
       }
     }
 
     .flower {
       position: absolute;
-      bottom: 4rem;
-      right: 1rem;
+      top: -2rem;
+      right: 4rem;
       width: clamp(80px, 10vw, 150px);
-      /* Scales between 80px and 150px */
       height: clamp(80px, 10vw, 150px);
 
       @media (max-width: 790px) {
         bottom: 1rem;
-        right: 0;
+        right: 50%;
+        transform: translateX(50%);
       }
     }
 
     .services-bottom {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+
+      .s-button {
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        height: 1rem;
+        padding: -3rem;
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        margin-bottom: 2rem;
+        z-index: 1001;
+
+        @media (max-width: 790px) {
+          display: none;
+        }
+      }
+
+      .s-button:hover,
+      .s-button:focus {
+        transform: scale(1.05);
+      }
 
       .services-content {
+        z-index: 1002;
+
         p {
-          font-size: 1.5rem;
+          font-size: clamp(1rem, 2vw, 1.5rem);
           margin-bottom: 3rem;
         }
       }
 
-      .services-image-cluster img {
-        max-width: 100%;
-        height: auto;
+      .services-image-holder img {
+        display: none;
+
+        @media (max-width: 790px) {
+          display: block;
+          max-width: 80%;
+          height: auto;
+          margin-left: 20%;
+        }
+      }
+
+      .services-image-cluster {
+        position: absolute;
+        bottom: 3rem;
+        right: 25%;
+
+        img {
+          max-width: 100%;
+          height: auto;
+
+          @media (max-width: 790px) {
+            display: none;
+          }
+        }
       }
     }
 
@@ -258,7 +300,7 @@ body {
       }
 
       .services-title h2 {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 5vw, 2.5rem);
       }
 
       .services-content p {
@@ -266,6 +308,8 @@ body {
       }
     }
   }
+
+
 
   .image-parallax {
     height: 40vw;
@@ -338,7 +382,7 @@ body {
 
         @media (max-width: 790px) {
           p {
-            font-size: -1.2rem;
+            font-size: 0.55rem;
           }
         }
       }
@@ -368,4 +412,39 @@ body {
   .footer-content {
     text-align: center;
   }
-}   
+}
+
+
+
+/** ABOUT PAGE **/
+
+.about {
+  .polaroid {
+    img {
+      @media (max-width: 790px) {
+        width: clamp(80px, 10vw, 150px);
+        height: clamp(80px, 10vw, 150px);
+      }
+    }
+  }
+
+  .s-button {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    height: 1rem;
+    padding: -3rem;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    margin-bottom: 2rem;
+    z-index: 1001;
+
+    @media (max-width: 790px) {
+      display: none;
+    }
+  }
+
+  .s-button:hover,
+  .s-button:focus {
+    transform: scale(1.05);
+  }
+}
