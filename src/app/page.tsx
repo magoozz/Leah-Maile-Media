@@ -137,7 +137,7 @@ export default function Home() {
         </div>
         <div className="services-bottom">
           <div className="services-image-holder col-md-6">
-            <Image src="/images/info2.svg" alt="LeahP" width={800} height={800} />
+            <Image src="/images/info-mobile.svg" alt="LeahP" width={800} height={800} />
           </div>
 
           <div className="services-image-cluster">

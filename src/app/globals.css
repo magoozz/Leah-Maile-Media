@@ -167,6 +167,10 @@ body {
         padding: -3rem;
         transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
         margin-bottom: 2rem;
+
+        @media (max-width: 790px) {
+          display: none;
+        }
       }
 
       .a-button:hover,
