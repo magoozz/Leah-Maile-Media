@@ -125,7 +125,7 @@ body {
 
         @media (max-width: 1363px) {
           margin-top: -3rem;
-          max-width: 50rem;
+          width: 76vw;
         }
       }
 
@@ -328,6 +328,7 @@ body {
 
       .services-content {
         padding: 1rem;
+        width: 76vw;
       }
 
       .services-title h2 {
@@ -347,14 +348,12 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* Parallax Effect */
   }
 
   .parallax-image {
     display: none;
   }
 
-  /* Adjust for smaller screens if necessary */
   @media (max-width: 790px) {
     .image-parallax {
       height: 50vw;
