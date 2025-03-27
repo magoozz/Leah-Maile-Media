@@ -217,8 +217,8 @@ body {
 
     .flower {
       position: absolute;
-      bottom: 26%;
-      right: 4%;
+      bottom: 8%;
+      right: 2%;
       width: clamp(80px, 10vw, 150px);
       height: clamp(80px, 10vw, 150px);
 
