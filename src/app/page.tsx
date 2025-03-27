@@ -121,8 +121,9 @@ export default function Home() {
       </div>
 
       <div className="image-parallax">
-        <Image className="parallax-image" src="/images/emily_leaf.jpg" alt="LeahP" width={500} height={200} />
+        <div className="parallax-image"></div>
       </div>
+
 
       <div className="services">
         <div className="services-top">

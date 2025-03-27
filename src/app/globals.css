@@ -104,6 +104,14 @@ body {
       .title {
         margin-bottom: 2rem;
 
+        @media (max-width: 1363px) {
+          margin-bottom: 1rem;
+
+          h1 {
+            font-size: 3.5rem !important;
+          }
+        }
+
         h1 {
           font-size: 4rem;
           color: #506248;
@@ -114,7 +122,11 @@ body {
       p {
         font-size: 1.5rem;
         margin-bottom: 2rem;
-        /* Adjusted */
+
+        @media (max-width: 1363px) {
+          margin-top: -3rem;
+          max-width: 50rem;
+        }
       }
 
       .a-button {
@@ -147,7 +159,7 @@ body {
     }
 
     /* Mobile Adjustments */
-    @media (max-width: 790px) {
+    @media (max-width: 1363px) {
       flex-direction: column;
       text-align: center;
 
@@ -164,7 +176,6 @@ body {
       .a-button {
         position: static;
         margin-top: 2rem;
-        /* Ensures proper spacing */
       }
     }
   }
@@ -260,10 +271,8 @@ body {
         /* Adjust for smaller screens */
         @media (max-width: 790px) {
           margin-left: auto;
-          /* Centers button in smaller screens */
           margin-right: auto;
           max-width: 60%;
-          /* Adjust width */
         }
 
         @media (max-width: 480px) {
@@ -314,6 +323,7 @@ body {
       .services-bottom {
         align-items: center;
         text-align: center;
+        flex-direction: column;
       }
 
       .services-content {
@@ -350,9 +360,6 @@ body {
       height: 50vw;
     }
 
-    .parallax-image {
-      display: block;
-    }
   }
 
   .testimonials {
