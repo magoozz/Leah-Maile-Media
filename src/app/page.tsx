@@ -110,7 +110,7 @@ export default function Home() {
           </p>
           <Link href="/about" className="a-button">
             <div className="note">
-              <Image src="/images/me.svg" alt="Get to know me note" width={500} height={500} />
+              <Image src="/images/me.svg" alt="Get to know me note" width={400} height={400} />
             </div>
           </Link>
 

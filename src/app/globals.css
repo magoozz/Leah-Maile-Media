@@ -162,7 +162,7 @@ body {
       .a-button {
         position: absolute;
         top: 50%;
-        right: 50%;
+        right: 60%;
         height: 1rem;
         padding: -3rem;
         transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
@@ -218,14 +218,14 @@ body {
 
     .flower {
       position: absolute;
-      top: -2rem;
+      top: 4%;
       right: 4rem;
       width: clamp(80px, 10vw, 150px);
       height: clamp(80px, 10vw, 150px);
 
       @media (max-width: 790px) {
-        bottom: 1rem;
-        right: 50%;
+        top: 4%;
+        right: 11%;
         transform: translateX(50%);
       }
     }
@@ -272,7 +272,7 @@ body {
           display: block;
           max-width: 80%;
           height: auto;
-          margin-left: 20%;
+          margin-left: 14%;
         }
       }
 
@@ -432,9 +432,9 @@ body {
     }
   }
 
-  .s-button {
+  .button {
     position: absolute;
-    top: 40%;
+    top: 10%;
     right: 5%;
     height: 1rem;
     padding: -3rem;
@@ -447,8 +447,8 @@ body {
     }
   }
 
-  .s-button:hover,
-  .s-button:focus {
+  .button:hover,
+  .button:focus {
     transform: scale(1.05);
   }
 }

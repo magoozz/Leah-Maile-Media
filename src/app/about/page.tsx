@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="About col-md-12">
+    <div className="about col-md-12">
       <p>Heres the about page, what shall we put here?</p>
       <Image
         src="/images/leahp-1.svg"
@@ -14,9 +14,9 @@ export default function About() {
         height={200}
       />
 
-      <Link href="/experience" className="s-button">
+      <Link href="/experience" className="button">
         <div className="polariod">
-          <Image src="/images/services.svg" alt="Girl smiling with her eyes closed holding babies breath 'check out my work!'" width={350} height={350} />
+          <Image src="/images/work-p.svg" alt="Girl smiling with her eyes closed holding babies breath 'check out my work!'" width={350} height={350} />
         </div>
       </Link>
     </div>
