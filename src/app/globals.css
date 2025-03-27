@@ -184,7 +184,6 @@ body {
     height: 40vw;
     overflow: hidden;
     position: relative;
-    z-index: 1002;
   }
 
 
@@ -218,13 +217,13 @@ body {
 
     .flower {
       position: absolute;
-      top: 4%;
-      right: 4rem;
+      bottom: 26%;
+      right: 4%;
       width: clamp(80px, 10vw, 150px);
       height: clamp(80px, 10vw, 150px);
 
       @media (max-width: 790px) {
-        top: 4%;
+        bottom: 3%;
         right: 11%;
         transform: translateX(50%);
       }
