@@ -141,7 +141,7 @@ export default function Home() {
           </div>
 
           <div className="services-image-cluster">
-            <Image src="/images/info.svg" alt="LeahP" width={1100} height={1100} />
+            <Image src="/images/info.svg" alt="LeahP" width={1100} height={1100} priority />
           </div>
 
           <div className="services-content col-md-5">
