@@ -317,7 +317,7 @@ body {
   .image-parallax {
     height: 40vw;
     overflow: hidden;
-    background-image: url('/images/clif.jpg');
+    background-image: url('/images/emily_leaf.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -326,13 +326,16 @@ body {
 
   .parallax-image {
     display: none;
-    /* Hides the Image component since we're using background-image */
   }
 
   /* Adjust for smaller screens if necessary */
   @media (max-width: 790px) {
     .image-parallax {
       height: 50vw;
+    }
+
+    .parallax-image {
+      display: block;
     }
   }
 
