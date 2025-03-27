@@ -130,6 +130,9 @@ export default function Home() {
             <h2>
               Lifestyle photographer based in WA state
             </h2>
+            <h3>
+              Portraits, couples, teams, and everything in between!
+            </h3>
           </div>
           <div className="flower">
             <Image src="/images/taped-breath.svg" alt="LeahP" width={175} height={175} />

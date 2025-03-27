@@ -213,6 +213,17 @@ body {
         font-weight: bold;
         margin: 0 auto;
       }
+
+      h3 {
+        font-size: clamp(1rem, 4vw, 2rem);
+        color: #506248;
+        font-weight: bold;
+        margin: 0 auto;
+
+        @media (max-width: 790px) {
+          width: 70%
+        }
+      }
     }
 
     .flower {
