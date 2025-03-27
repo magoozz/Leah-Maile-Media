@@ -95,6 +95,7 @@ body {
       padding-left: 2%;
       padding-right: 2%;
       flex-direction: column;
+      margin-bottom: 2rem;
 
       .about-image-cluster {
         display: none;
@@ -156,54 +157,52 @@ body {
         margin-bottom: 3rem;
       }
 
+      .note {
+        margin-top: 7rem;
+        margin-left: 6rem;
+
+        @media (max-width: 790px) {
+          margin-left: 0;
+          margin-top: -3rem;
+        }
+      }
+
       .button {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        padding: 20px 20px;
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: #fadadd;
-        background-color: #506248;
-        border-radius: 8px;
-        text-decoration: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 1rem;
+        padding: -3rem;
         transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
         margin-bottom: 2rem;
-        /*
-        margin-left: 40%;
-        */
       }
 
       .button:hover,
       .button:focus {
-        background-color: #6b8f5b;
         transform: scale(1.05);
-        box-shadow:
-          inset 0 0 8px #506248,
-          0 0 10px rgba(13, 84, 70, 0.5),
-          0 0 15px rgba(6, 58, 48, 0.4);
       }
 
       .button:focus {
         outline: none;
-        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
       }
     }
   }
 
   .image-break {
-    height: 30vw;
+    height: 40vw;
     overflow: hidden;
-
-    .image {
-      width: 100vw;
-      height: 200%;
-    }
+    position: relative;
   }
+
 
   .services {
     margin: 2rem 0;
+    position: relative;
+    height: 50vw;
+
+    .services-top {
+      display: flex;
+      justify-content: center;
+    }
 
     .services-title {
       text-align: center;
@@ -212,6 +211,20 @@ body {
         font-size: 3.5rem;
         color: #506248;
         font-weight: bold;
+      }
+    }
+
+    .flower {
+      position: absolute;
+      bottom: 4rem;
+      right: 1rem;
+      width: clamp(80px, 10vw, 150px);
+      /* Scales between 80px and 150px */
+      height: clamp(80px, 10vw, 150px);
+
+      @media (max-width: 790px) {
+        bottom: 1rem;
+        right: 0;
       }
     }
 
@@ -254,6 +267,27 @@ body {
     }
   }
 
+  .image-parallax {
+    height: 40vw;
+    overflow: hidden;
+    background-image: url('/images/clif.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax Effect */
+  }
+
+  .parallax-image {
+    display: none;
+    /* Hides the Image component since we're using background-image */
+  }
+
+  /* Adjust for smaller screens if necessary */
+  @media (max-width: 790px) {
+    .image-parallax {
+      height: 50vw;
+    }
+  }
 
   .testimonials {
     background: linear-gradient(90deg,
@@ -334,4 +368,4 @@ body {
   .footer-content {
     text-align: center;
   }
-}
+}   

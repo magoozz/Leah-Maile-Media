@@ -14,8 +14,8 @@ export default function Footer() {
                     <Link href="/">
                         <Image
                             src="/images/logo-stamp-filled.svg"
-                            alt="Leah Maile Media, EST 2018, Capturing the moment. Flower graphic"
-                            width={400} // Adjust width and height as needed
+                            alt="Leah Maile Media, ESTD 2018, Capturing the moment. Flower graphic"
+                            width={400}
                             height={400}
                         />
                     </Link>

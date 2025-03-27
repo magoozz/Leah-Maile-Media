@@ -108,15 +108,18 @@ export default function Home() {
             I promise to create a gallery that you will always be able to look back on foundly. I look forward to meeting you and learning
             more about whats most special to you!
           </p>
-          <Link href="/about" className="button" target="_blank" rel="noopener noreferrer">Get to know me!</Link>
+          <Link href="/about" className="button">           <div className="note">
+            <Image src="/images/me.svg" alt="Get to know me note" width={400} height={400} />
+          </div></Link>
+
         </div>
         <div className="about-image-cluster col-md-4">
           <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Holding flowers sitting next to a fern leaf and three flowers" width={500} height={500} />
         </div>
       </div>
 
-      <div className="image-break">
-        <Image className="image" src="/images/clif.jpg" alt="LeahP" width={500} height={200} />
+      <div className="image-parallax">
+        <Image className="parallax-image" src="/images/clif.jpg" alt="LeahP" width={500} height={200} />
       </div>
 
       <div className="services">
@@ -126,18 +129,32 @@ export default function Home() {
               Lifestyle photographer based in WA state
             </h2>
           </div>
+          <div className="flower">
+            <Image src="/images/taped-breath.svg" alt="LeahP" width={175} height={175} />
+          </div>
         </div>
         <div className="services-bottom">
-          <div className="services-image-cluster col-md-7">
-            <Image src="/images/info2.svg" alt="LeahP" width={800} height={900} />
+          <div className="services-image-cluster col-md-6">
+            <Image src="/images/info.svg" alt="LeahP" width={900} height={900} />
           </div>
-          <div className="services-content col-md-4">
-            <p>If you&apos;re looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal. 
-              I truly believe in creating connections with my clients, and it means the world to me when they say, “I feel like we&apos;re friends.” The truth is, we absolutely are. 
+          <div className="services-content col-md-5">
+            <p>If you&apos;re looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal.
+              I truly believe in creating connections with my clients, and it means the world to me when they say, “I feel like we&apos;re friends.” The truth is, we absolutely are.
               I&apos;m here to capture your moments, make you feel comfortable, and help tell your story in a way that feels personal and real.</p>
           </div>
         </div>
       </div>
+
+      <div className="image-break">
+        <Image
+          className="image"
+          src="/images/grad_15.jpg"
+          alt="LeahP"
+          width={1920}
+          height={1080}
+          quality={90}
+          layout="responsive"
+        />      </div>
 
       <div className="testimonials">
         <AnimatePresence mode="wait" custom={direction}>
