@@ -92,7 +92,7 @@ body {
     position: relative;
     flex-wrap: wrap;
     padding: 2rem;
-  
+
     .about-content {
       display: flex;
       flex-direction: column;
@@ -100,36 +100,38 @@ body {
       text-align: center;
       max-width: 800px;
       padding: 1rem;
-  
+
       .title {
         margin-bottom: 2rem;
-  
+
         h1 {
           font-size: 4rem;
           color: #506248;
           font-weight: bold;
         }
       }
-  
+
       p {
         font-size: 1.5rem;
-        margin-bottom: 2rem; /* Adjusted */
+        margin-bottom: 2rem;
+        /* Adjusted */
       }
-  
+
       .a-button {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 300px; /* Allows scaling */
+        max-width: 300px;
+        /* Allows scaling */
         height: auto;
         transition: transform 0.2s ease-in-out;
         margin-top: 1rem;
-  
+
         img {
           width: 100%;
           height: auto;
         }
-  
+
         &:hover {
           transform: scale(1.05);
         }
@@ -143,29 +145,30 @@ body {
     .about-image-cluster-mobile {
       display: none;
     }
-  
+
     /* Mobile Adjustments */
     @media (max-width: 790px) {
       flex-direction: column;
       text-align: center;
-  
+
       .about-image-cluster {
         display: none;
       }
-  
+
       .about-image-cluster-mobile {
         display: flex;
         justify-content: center;
         margin-top: -3rem;
       }
-  
+
       .a-button {
         position: static;
-        margin-top: 2rem; /* Ensures proper spacing */
+        margin-top: 2rem;
+        /* Ensures proper spacing */
       }
     }
   }
-  
+
 
   .image-break {
     height: 40vw;
@@ -177,7 +180,7 @@ body {
   .services {
     margin: 2rem 0;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 
 
     @media (max-width: 790px) {
@@ -235,27 +238,42 @@ body {
       flex-wrap: wrap;
 
       .s-button {
-        position: absolute;
-        top: 40%;
-        right: 5%;
-        height: 1rem;
-        padding: -3rem;
-        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-        margin-bottom: 2rem;
-        z-index: 1001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: clamp(250px, 30vw, 400px);
+        height: auto;
+        transition: transform 0.2s ease-in-out;
+        margin-top: -3rem;
+        margin-left: clamp(5%, 10vw, 15%);
+        margin-bottom: 5%;
 
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        /* Adjust for smaller screens */
         @media (max-width: 790px) {
-          display: none;
+          margin-left: auto;
+          /* Centers button in smaller screens */
+          margin-right: auto;
+          max-width: 60%;
+          /* Adjust width */
+        }
+
+        @media (max-width: 480px) {
+          max-width: 80%;
+          /* Make the button larger for smaller screens */
         }
       }
 
-      .s-button:hover,
-      .s-button:focus {
-        transform: scale(1.05);
-      }
 
       .services-content {
-        z-index: 1002;
 
         p {
           font-size: clamp(1rem, 2vw, 1.5rem);
@@ -279,6 +297,7 @@ body {
         top: 26%;
         right: 25%;
         aspect-ratio: 1/1;
+        z-index: -1;
 
         img {
           max-width: 100%;
@@ -310,8 +329,6 @@ body {
       }
     }
   }
-
-
 
   .image-parallax {
     height: 40vw;
@@ -405,6 +422,7 @@ body {
     }
   }
 }
+
 
 .footer {
   background-color: #506248;

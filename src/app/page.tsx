@@ -101,7 +101,7 @@ export default function Home() {
             <h1>Hi I&apos;m Leah!</h1>
           </div>
           <div className="about-image-cluster-mobile">
-            <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Hlding flowers sitting next to a fern leaf and three flowers" width={400} height={400}/>
+            <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Hlding flowers sitting next to a fern leaf and three flowers" width={400} height={400} />
           </div>
           <p>Nice to meet you, I&apos;m a photographer based out of Washington State who is devoted to capturing those special
             moments that you will never forget! Creating an experience that allows you feel confident and happy for all occasions.
@@ -131,7 +131,7 @@ export default function Home() {
               Lifestyle photographer based in WA state
             </h2>
             <h3>
-              Portraits, couples, teams, and everything in between!
+              Love, graduation, teams, and everything in between!
             </h3>
           </div>
           <div className="flower">
@@ -151,8 +151,12 @@ export default function Home() {
             <p>If you&apos;re looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal.
               I truly believe in creating connections with my clients, and it means the world to me when they say, “I feel like we&apos;re friends.” The truth is, we absolutely are.
               I&apos;m here to capture your moments, make you feel comfortable, and help tell your story in a way that feels personal and real.</p>
+            <Link href="/experience" className="s-button">
+              <div className="polariod">
+                <Image src="/images/work-button.svg" alt="Couple embracing with wooded background 'Check out my work!'" width={400} height={400} />
+              </div>
+            </Link>
           </div>
-
         </div>
       </div>
 
