@@ -4,11 +4,12 @@ import PortfolioGrid from "@/components/PortfolioGrid";
 
 
 const photos = [
-  { src: "/images/aj_1.jpg", alt: "Mountain View", orientation: "landscape" },
-  { src: "/images/clif.jpg", alt: "Cityscape", orientation: "landscape" },
-  { src: "/images/sid_1.jpg", alt: "Forest Path", orientation: "portrait" },
-  { src: "/images/molly_1.jpg", alt: "Sunset Beach", orientation: "portrait" },
-  { src: "/images/emily_leaf.jpg", alt: "Night Sky", orientation: "portrait" },
+  { src: "/images/aj_1.jpg", alt: "Mountain View" },
+  { src: "/images/clif.jpg", alt: "Cityscape" },
+  { src: "/images/sid_1.jpg", alt: "Forest Path" },
+  { src: "/images/molly_1.jpg", alt: "Sunset Beach" },
+  { src: "/images/emily_leaf.jpg", alt: "Night Sky" },
+  { src: "/images/photo6.jpg", alt: "Desert Dunes" },
 ];
 
 export default function Portfolio() {

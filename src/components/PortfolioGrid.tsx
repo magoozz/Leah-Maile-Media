@@ -1,41 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 interface PortfolioGridProps {
   images: { src: string; alt: string; orientation?: "portrait" | "landscape" }[];
 }
 
 export default function PortfolioGrid({ images }: PortfolioGridProps) {
-  const [imageOrientations, setImageOrientations] = useState<string[]>([]);
-
-  useEffect(() => {
-    const loadImages = async () => {
-      const orientations = await Promise.all(
-        images.map((image) =>
-          new Promise<string>((resolve) => {
-            if (image.orientation) {
-              resolve(image.orientation); // Use manual setting if available
-            } else {
-              const img = new window.Image();
-              img.src = image.src;
-              img.onload = () => {
-                const detectedOrientation: "portrait" | "landscape" =
-                  img.naturalHeight > img.naturalWidth ? "portrait" : "landscape";
-                resolve(detectedOrientation);
-              };
-              
-            }
-          })
-        )
-      );
-      setImageOrientations(orientations);
-    };
-
-    loadImages();
-  }, [images]);
-
   return (
     <div className="portfolio-grid">
       {images.map((image, index) => (
@@ -44,7 +15,7 @@ export default function PortfolioGrid({ images }: PortfolioGridProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
-          className={`portfolio-item ${imageOrientations[index]}`}
+          className={`portfolio-item ${image.orientation ?? "landscape"}`}
         >
           <Image
             src={image.src}
