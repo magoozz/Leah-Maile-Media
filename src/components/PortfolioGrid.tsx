@@ -21,8 +21,11 @@ export default function PortfolioGrid({ images }: PortfolioGridProps) {
               const img = new window.Image();
               img.src = image.src;
               img.onload = () => {
-                resolve(img.naturalHeight > img.naturalWidth ? "portrait" : "landscape");
+                const detectedOrientation: "portrait" | "landscape" =
+                  img.naturalHeight > img.naturalWidth ? "portrait" : "landscape";
+                resolve(detectedOrientation);
               };
+              
             }
           })
         )
