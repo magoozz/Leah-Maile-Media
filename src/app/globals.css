@@ -121,12 +121,14 @@ body {
       padding: 1rem;
 
       .title {
-        margin-bottom: 5rem;
-        margin-top: 2rem;
+        margin-bottom: 2rem;
 
         @media (max-width: 1363px) {
           margin-bottom: 1rem;
 
+          h1 {
+            font-size: 3rem;
+          }
         }
 
         h1 {
