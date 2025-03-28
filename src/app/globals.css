@@ -228,11 +228,15 @@ body {
       margin-bottom: 3rem;
 
       h2 {
-        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
         color: #506248;
         font-weight: bold;
         margin: 0 auto;
-        font-family: "vogue", sans-serif;
+        font-family: "vogue";
+
+        @media (max-width: 790px) {
+          margin-bottom:1rem;
+        }
       }
 
       h3 {
@@ -240,7 +244,7 @@ body {
         color: #506248;
         font-weight: bold;
         margin: 0 auto;
-        font-family: "vogue", sans-serif;
+        font-family: "vogue";
 
         @media (max-width: 790px) {
           width: 70%
@@ -506,17 +510,19 @@ body {
 /* PORTFOLIO PAGE */
 .portfolio {
   background: url('/images/paper.png') repeat;
-  min-height: 100vh; 
+  min-height: 100vh;
 
   .portfolio__title {
     h1 {
       margin-top: 2rem;
-      font-size: 5rem;
       font-weight: bold;
+      font-size: clamp(3.5rem, 4vw, 7rem);
+      font-weight: bold;
+      font-family: "vogue";
     }
 
     h2 {
-      margin-top: -1rem;
+      margin-top: -1.5rem;
       font-size: 3rem;
       font-family: "daydream", sans-serif;
     }
@@ -525,16 +531,17 @@ body {
   .portfolio-grid {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3, 1fr); /* Exactly 3 images per row */
+    grid-template-columns: repeat(3, 1fr);
+    /* Exactly 3 images per row */
     grid-auto-flow: dense;
     margin: 1rem 3rem;
   }
-  
+
   .portfolio-item {
     position: relative;
     overflow: hidden;
   }
-  
+
   .portfolio-item img {
     width: 100%;
     height: auto;
@@ -542,17 +549,18 @@ body {
     border: 0.5rem solid;
     border-color: #506248;
   }
-  
+
   /* Portrait images span 2 rows */
   .portfolio-item.portrait {
     grid-row: span 2;
-    aspect-ratio: 3 / 4; /* Maintain portrait aspect */
+    aspect-ratio: 3 / 4;
+    /* Maintain portrait aspect */
   }
-  
+
   /* Landscape images take 1 row */
   .portfolio-item.landscape {
     grid-column: span 1;
     aspect-ratio: 4 / 3;
-    }
-  
+  }
+
 }
