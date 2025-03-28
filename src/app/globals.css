@@ -121,7 +121,8 @@ body {
       padding: 1rem;
 
       .title {
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
+        margin-top: 2rem;
 
         @media (max-width: 1363px) {
           margin-bottom: 1rem;
@@ -132,7 +133,8 @@ body {
           font-size: 5rem;
           color: #506248;
           font-weight: bold;
-          font-family: "vogue", sans-serif;
+          font-family: "vogue";
+          line-height: 0.2rem;
         }
       }
 
