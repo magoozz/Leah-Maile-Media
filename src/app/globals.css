@@ -140,6 +140,7 @@ body {
         font-size: 1.5rem;
         margin-bottom: 2rem;
         font-family: "Typewriter";
+        text-align: left;
 
         @media (max-width: 1363px) {
           margin-top: -3rem;
