@@ -127,7 +127,7 @@ body {
           margin-bottom: 1rem;
 
           h1 {
-            font-size: 3rem;
+            font-size: 3rem !important;
           }
         }
 
@@ -136,7 +136,6 @@ body {
           color: #506248;
           font-weight: bold;
           font-family: "vogue";
-          line-height: 0.2rem;
         }
       }
 
