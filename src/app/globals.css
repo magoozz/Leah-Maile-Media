@@ -429,15 +429,15 @@ body {
 
       .postcard-text {
         position: absolute;
-        top: 26%;
+        top: 22%;
         left: 18%;
         font-size: 1.2rem;
         font-size: clamp(0.6rem, 2vw, 1.2rem);
-        line-height: 1.4;
         max-width: 29%;
 
         p {
           font-family: "Typewriter", sans-serif;
+          line-height: 1.5 !important;
         }
 
         @media (max-width: 790px) {

@@ -115,7 +115,7 @@ export default function Home() {
           </Link>
 
         </div>
-        <div className="about-image-cluster col-md-4">
+        <div className="about-image-cluster col-md-6">
           <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Holding flowers sitting next to a fern leaf and three flowers" width={900} height={900} />
         </div>
       </div>
