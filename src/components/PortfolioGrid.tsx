@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface PortfolioGridProps {
-  images: { src: string; alt: string; orientation: "portrait" | "landscape" }[];
+  images: { src: string; alt: string; orientation?: "portrait" | "landscape" }[];
 }
 
 export default function PortfolioGrid({ images }: PortfolioGridProps) {

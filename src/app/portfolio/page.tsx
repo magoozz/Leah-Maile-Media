@@ -9,7 +9,6 @@ const photos = [
   { src: "/images/sid_1.jpg", alt: "Forest Path", orientation: "portrait" },
   { src: "/images/molly_1.jpg", alt: "Sunset Beach", orientation: "portrait" },
   { src: "/images/emily_leaf.jpg", alt: "Night Sky", orientation: "portrait" },
-  { src: "/images/photo6.jpg", alt: "Desert Dunes" },
 ];
 
 export default function Portfolio() {
