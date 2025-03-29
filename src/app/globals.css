@@ -47,7 +47,7 @@ main {
   margin-top: 13rem;
 
   @media (max-width: 1164px) {
-    margin-top: 7.5rem;
+    margin-top: 7.75rem;
   }
 }
 
