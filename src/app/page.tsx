@@ -8,53 +8,53 @@ import { AnimatePresence } from "framer-motion"; // Import AnimatePresence
 import Link from "next/link";
 
 const images = [
-  "/images/clif.jpg",
-  "/images/grad_1.jpg",
-  "/images/emily_leaf.jpg",
-  "/images/aj_1.jpg",
+  "/images/portfolio/clif.jpg",
+  "/images/portfolio/grad_1.jpg",
+  "/images/portfolio/emily_leaf.jpg",
+  "/images/portfolio/aj_1.jpg",
 ];
 
 const testimonials = [
   {
     text: "Leah made me feel so comfortable throughout the shoot. She is super encouraging and helped me relax, especially since I am a bit shy. Her positive energy made the whole experience fun, and her talent for capturing special moments is amazing!",
-    stamp: "/images/stamp-emily.svg",
+    stamp: "/images/postcard/stamp-emily.svg",
     stampAlt: "Image of Emily smiling with flowers",
-    signature: "/images/signature-emily.svg",
+    signature: "/images/postcard/signature-emily.svg",
     signatureAlt: "Heart Emily",
   },
   {
     text: "Leah did an outstanding job with my college graduation photos! She is communicative, professional, and kept the entire process fun! I highly recommend Leah to anyone who is looking to get professional pictures taken!",
-    stamp: "/images/stamp-molly.svg",
+    stamp: "/images/postcard/stamp-molly.svg",
     stampAlt: "Image of Molly smiling",
-    signature: "/images/signature-molly.svg",
+    signature: "/images/postcard/signature-molly.svg",
     signatureAlt: "Heart Molly",
   },
   {
     text: "I was so happy to have worked with Leah when getting my college graduation photos taken. She made the whole process fun and the pictures turned out exactly how I wanted them to!",
-    stamp: "/images/stamp-aj.svg",
+    stamp: "/images/postcard/stamp-aj.svg",
     stampAlt: "Image of AJ smiling",
-    signature: "/images/signature-aj.svg",
+    signature: "/images/postcard/signature-aj.svg",
     signatureAlt: "Dash AJ",
   },
   {
     text: "Leah is AMAZING! She made me feel so comfortable during my grad session, and I absolutely loved how my photos turned out! Leah is the best at capturing your happiest moments! I would recommend her again and again :-)",
-    stamp: "/images/stamp-sidney.svg",
+    stamp: "/images/postcard/stamp-sidney.svg",
     stampAlt: "Image of Sidney smiling",
-    signature: "/images/signature-sidney.svg",
+    signature: "/images/postcard/signature-sidney.svg",
     signatureAlt: "Heart Sidney",
   },
   {
     text: "Leah is one of my favorite photographers to work with! She makes you feel so comfortable and allows you to be YOU in your photos which is amazing! She was so fun to work with, and did an incredible job with my photos!! You will not be disappointed!!",
-    stamp: "/images/stamp-emily.svg",
+    stamp: "/images/postcard/stamp-emily.svg",
     stampAlt: "Image of Haley smiling",
-    signature: "/images/signature-haley.svg",
+    signature: "/images/postcard/signature-haley.svg",
     signatureAlt: "Heart Haley",
   },
   {
     text: "Leah knows how to make you feel like your best friend is behind the camera. Shes able to capture your natural beauty by making you smile! Taking photos with Leah is capturing your happiest moments in their truest form.",
-    stamp: "/images/stamp-megan.svg",
+    stamp: "/images/postcard/stamp-megan.svg",
     stampAlt: "Image of Megan smiling",
-    signature: "/images/signature-megan.svg",
+    signature: "/images/postcard/signature-megan.svg",
     signatureAlt: "Heart Megan",
   },
 ];
@@ -116,7 +116,7 @@ export default function Home() {
 
         </div>
         <div className="about-image-cluster col-md-6">
-          <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Holding flowers sitting next to a fern leaf and three flowers" width={900} height={900} />
+          <Image src="/images/leahfront.svg" alt="Polaroid of Leah Maile Holding flowers sitting next to a fern leaf and three flowers" width={750} height={750} />
         </div>
       </div>
 
@@ -136,7 +136,7 @@ export default function Home() {
             </h3>
           </div>
           <div className="flower">
-            <Image src="/images/taped-breath.svg" alt="LeahP" width={175} height={175} />
+            <Image src="/images/decor/taped-breath.svg" alt="LeahP" width={175} height={175} />
           </div>
         </div>
         <div className="services-bottom">
@@ -164,7 +164,7 @@ export default function Home() {
       <div className="image-break">
         <Image
           className="image"
-          src="/images/grad_15.jpg"
+          src="/images/portfolio/grad_15.jpg"
           alt="LeahP"
           width={1920}
           height={1080}
