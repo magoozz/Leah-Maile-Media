@@ -84,13 +84,15 @@ main {
 
   @media (max-width: 1164px) {
 
+    gap: 1rem;
+
     .stamp {
       max-width: 100px;
       height: auto;
     }
 
     a {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
 }
