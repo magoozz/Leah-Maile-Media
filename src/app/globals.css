@@ -47,7 +47,7 @@ main {
   margin-top: 13rem;
 
   @media (max-width: 1164px) {
-    margin-top: 7rem;
+    margin-top: 7.5rem;
   }
 }
 
@@ -84,7 +84,7 @@ main {
 
   @media (max-width: 1164px) {
 
-    gap: 1rem;
+    gap: 0.5rem;
 
     .stamp {
       max-width: 100px;
