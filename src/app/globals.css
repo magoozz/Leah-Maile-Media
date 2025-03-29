@@ -43,41 +43,221 @@ body {
   }
 }
 
-.nav-container {
+main {
+  margin-top: 13rem;
+
+  @media (max-width: 1164px) {
+    margin-top: 8rem;
+  }
+}
+
+/* NAVIGATION */
+.navigation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #506248;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #dad7cd;
-  padding: 1rem 2rem;
-  color: #506248;
+  padding: 1rem;
+  z-index: 50;
 }
 
-.nav-left h1 {
-  font-size: 1.5rem;
+.nav-name {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    font-size: clamp(4rem, 3vw, 5rem);
+    color: #dad7cd;
+    font-weight: bold;
+    font-family: "vogue";
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #fadadd;
+  }
+
+  @media (max-width: 1164px) {
+
+    .stamp {
+      max-width: 100px;
+      height: auto;
+    }
+
+    a {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links li a {
-  color: #506248;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.nav-links li a:hover {
-  text-decoration: underline;
-}
-
-.nav-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-right: 2rem;
+
+  .instagram-desktop a::after {
+    background-color: #506248;
+  }
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: #dad7cd;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  font-weight: bold;
+  font-family: "vogue";
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px; 
+  background-color: #fadadd; 
+  transition: width 0.3s ease; 
+}
+
+.nav-links a:hover {
+  color: #fadadd;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+.instagram-mobile {
+  position: relative;
+  display: block;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.instagram-mobile:hover {
+  transform: scale(1.2);
+  color: #fadadd;
+}
+
+.instagram-mobile::after {
+  position: absolute;
+  bottom: -2px; 
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* Mobile Menu */
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.instagram-mobile {
+  display: none;
+}
+
+.instagram-desktop {
+  display: block;
+}
+
+
+.toggle {
+  color: #dad7cd;
+}
+
+@media (max-width: 1164px) {
+  .nav-links {
+    display: none;
+  }
+
+  .instagram-mobile {
+    display: block;
+    margin-left: 0.5rem;
+  }
+
+  .instagram-desktop {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 30%;
+    background-color: #dad7cd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  .mobile-nav li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #bfbfbf; 
+  }
+  
+  .mobile-nav li:last-child {
+    border-bottom: 1px solid #bfbfbf;
+  }
+  
+  .mobile-nav a {
+    display: block; 
+    padding: 1rem;
+    text-decoration: none;
+    color: #506248;
+    font-weight: bold;
+    font-family: "vogue";
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-nav a:hover {
+    background-color: #506248;
+    color: #fadadd;
+  }
+  
+  .mobile-item {
+    font-weight: bold;
+    font-family: "vogue";
+    padding: 1rem;
+  }
+}
+
+
+@media (min-width: 1165px) {
+  .toggle {
+    display: none;
+  }
+}
+
+
+
+/* HOME PAGE */
 .home {
 
   .images {
@@ -239,7 +419,7 @@ body {
         font-family: "vogue";
 
         @media (max-width: 790px) {
-          margin-bottom:1rem;
+          margin-bottom: 1rem;
         }
       }
 
@@ -514,15 +694,15 @@ body {
 /* PORTFOLIO PAGE */
 .portfolio {
   background: linear-gradient(90deg,
-  #e8e3db 50%,
-  #bfbfbf 50%);
-background-size: 40px 40px;
+      #e8e3db 50%,
+      #bfbfbf 50%);
+  background-size: 40px 40px;
   min-height: 100vh;
 
   .portfolio-title {
     margin-bottom: 2rem;
     margin-left: 1rem;
- /*   background: url('/images/decor/scrap-paper.svg') repeat;
+    /*   background: url('/images/decor/scrap-paper.svg') repeat;
     background-repeat: no-repeat; */
 
     h1 {
@@ -546,7 +726,5 @@ background-size: 40px 40px;
       border: 0.5rem solid #506248;
     }
   }
-  
 
 }
-
