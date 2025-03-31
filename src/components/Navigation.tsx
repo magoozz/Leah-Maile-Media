@@ -45,29 +45,27 @@ export default function Navigation() {
       </button>
 
       {/* Desktop Navigation */}
-      <div className="toggle">
-        <ul className="nav-links col-md-12">
-          {[
-            { label: "About", href: "/about" },
-            { label: "Info", href: "/experience" },
-            { label: "Portfolio", href: "/portfolio" },
-            { label: "Contact me!", href: "/contact" },
-          ].map(({ label, href }) => (
-            <li key={href}>
-              <Link href={href} className="hover:text-gray-500">
-                {label}
-              </Link>
-            </li>
-          ))}
-
-          {/* Instagram Icon for Desktop */}
-          <li className="instagram-desktop">
-            <a href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#" target="_blank" rel="noopener noreferrer">
-              <FaInstagram size={40} className="ig-icon" />
-            </a>
+      <ul className="nav-links col-md-12">
+        {[
+          { label: "About", href: "/about" },
+          { label: "Info", href: "/experience" },
+          { label: "Portfolio", href: "/portfolio" },
+          { label: "Contact me!", href: "/contact" },
+        ].map(({ label, href }) => (
+          <li key={href}>
+            <Link href={href} className="hover:text-gray-500">
+              {label}
+            </Link>
           </li>
-        </ul>
-      </div>
+        ))}
+        
+        {/* Instagram Icon for Desktop */}
+        <li className="instagram-desktop">
+          <a href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={40} className="ig-icon" />
+          </a>
+        </li>
+      </ul>
 
       {/* Mobile Navigation */}
       {isOpen && (

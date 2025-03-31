@@ -56,12 +56,10 @@ main {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #506248;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   z-index: 50;
   display: flex;
   flex-direction: column;
@@ -69,7 +67,9 @@ main {
   @media (max-width: 1164px) {
     flex-direction: row;
     justify-content: center;
-    padding: 0rem 3rem;
+    padding: 1rem 3rem;
+    background-color: #506248;
+
   }
 }
 
@@ -77,6 +77,8 @@ main {
   display: flex;
   align-items: center;
   gap: 2rem;
+  background-color: #506248;
+  padding: 1rem 0rem 1rem 7vw;
 
   .stamp {
     position: relative;
@@ -113,11 +115,10 @@ main {
 
   a:hover {
     color: #fadadd;
+
   }
 
   @media (max-width: 1164px) {
-
-    gap: 0.5rem;
 
     .stamp {
       max-width: 100px;
@@ -139,19 +140,11 @@ main {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-evenly;
   background-color: #dad7cd;
 
   .instagram-desktop a::after {
     background-color: #506248;
-  }
-}
-
-.toggle {
-  .col-md-12 {
-    @media (max-width: 1164px) {
-      width: 95% !important;
-    }
   }
 }
 
@@ -169,18 +162,20 @@ main {
   background-color: #fadadd;
 }
 
-.nav-links a {
+.nav-links li {
   text-decoration: none;
   color: #506248;
-  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: "vogue";
   transition: color 0.3s ease;
   position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 
-.nav-links a::after {
+.nav-links li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -191,12 +186,13 @@ main {
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links li:hover {
   color: #fadadd;
   background-color: #506248;
+  height: 100%;
 }
 
-.nav-links a:hover::after {
+.nav-links li:hover::after {
   width: 100%;
 }
 
