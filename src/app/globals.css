@@ -98,6 +98,10 @@ main {
   background-color: #506248;
   padding: 1rem 0rem 1rem 7vw;
 
+  @media (max-width: 767px) {
+    gap: 1rem;
+  }
+
   .stamp {
     position: relative;
     display: inline-block;
