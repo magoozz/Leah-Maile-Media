@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation"; // Import usePathname
 import Image from 'next/image';
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 
-
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // Get the current path
 
   return (
     <nav className="navigation">
@@ -52,16 +53,20 @@ export default function Navigation() {
           { label: "Portfolio", href: "/portfolio" },
           { label: "Contact me!", href: "/contact" },
         ].map(({ label, href }) => (
-          <li key={href}>
-            <Link href={href} className="hover:text-gray-500">
+          <li key={href} className={pathname === href ? "active" : ""}>
+            <Link href={href} className="block w-full h-full p-2">
               {label}
             </Link>
           </li>
         ))}
-        
+
         {/* Instagram Icon for Desktop */}
         <li className="instagram-desktop">
-          <a href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram size={40} className="ig-icon" />
           </a>
         </li>
@@ -76,7 +81,7 @@ export default function Navigation() {
             { label: "Portfolio", href: "/portfolio" },
             { label: "Contact me!", href: "/contact" },
           ].map(({ label, href }) => (
-            <li key={href}>
+            <li key={href} className={pathname === href ? "active" : ""}>
               <Link
                 href={href}
                 className="mobile-item"

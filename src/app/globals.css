@@ -71,7 +71,25 @@ main {
     background-color: #506248;
 
   }
+
+  @media (max-width: 767px) {
+    padding: 1rem;
+  }
 }
+
+.nav-links li.active {
+  font-weight: bold;
+  color: #ff6600;
+  /* Highlight color */
+  border-bottom: 2px solid #ff6600;
+  /* Underline effect */
+}
+
+.mobile-nav li.active {
+  font-weight: bold;
+  color: #ff6600;
+}
+
 
 .nav-name {
   display: flex;
