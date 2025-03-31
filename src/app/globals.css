@@ -100,6 +100,10 @@ main {
 
   @media (max-width: 767px) {
     gap: 1rem;
+
+    a {
+      text-align: center;
+    }
   }
 
   .stamp {
