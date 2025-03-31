@@ -104,7 +104,6 @@ main {
 
     a {
       text-align: center;
-      font-size: 2rem;
     }
   }
 
@@ -155,6 +154,12 @@ main {
 
     a {
       font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    a {
+      font-size: 2rem;
     }
   }
 }
