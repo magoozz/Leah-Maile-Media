@@ -15,19 +15,9 @@ export default function Footer() {
                         <Image
                             src="/images/logo-stamp-filled.svg"
                             alt="Leah Maile Media, ESTD 2018, Capturing the moment. Flower graphic"
-                            width={400}
-                            height={400}
+                            width={350}
+                            height={350}
                         />
-                    </Link>
-                </div>
-                <div className="ig">
-                    <Link
-                        href="https://www.goodreads.com/user/show/164080752-megan-bartlett"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Good Reads"
-                    >
-                        <FaBook size={24} />
                     </Link>
                 </div>
             </div>

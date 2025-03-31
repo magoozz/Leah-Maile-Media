@@ -21,7 +21,7 @@ const images = [
   { src: "/images/portfolio/grace_1.jpg" },
   { src: "/images/portfolio/sid_1.jpg" },
   { src: "/images/portfolio/sid_2.jpg" },
-  { src: "/images/portfolio/grad_7.jpg" }, 
+  { src: "/images/portfolio/grad_7.jpg" },
   { src: "/images/portfolio/grad_19.jpg" },
   { src: "/images/portfolio/grad_4.jpg" },
   { src: "/images/portfolio/molly_2.jpg" },
@@ -37,12 +37,11 @@ const breakpointColumns = {
 const PhotoGrid = () => {
   return (
     <div className="portfolio">
+      <div className="portfolio-title col-md-12">
+        <h1>Here to capture</h1>
+        <h2>your special moments</h2>
+      </div>
       <div className="p-15">
-        <div className="portfolio-title">
-          <h1>Here to capture</h1>
-          <h2>your special moments</h2>
-        </div>
-
         <Masonry
           breakpointCols={breakpointColumns}
           className="flex -ml-4"
