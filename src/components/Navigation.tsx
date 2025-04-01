@@ -48,7 +48,7 @@ export default function Navigation() {
       {/* Desktop Navigation */}
       <ul className="nav-links col-md-12">
         {[
-          { label: "About", href: "/about" },
+          { label: "Meet Leah", href: "/about" },
           { label: "Info", href: "/experience" },
           { label: "Portfolio", href: "/portfolio" },
           { label: "Contact me!", href: "/contact" },
@@ -61,14 +61,14 @@ export default function Navigation() {
         ))}
 
         {/* Instagram Icon for Desktop */}
-        <li className="instagram-desktop">
-          <a
+        <li className="instagram-desktop" key="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#">
+          <Link
             href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaInstagram size={40} className="ig-icon" />
-          </a>
+          </Link>
         </li>
       </ul>
 

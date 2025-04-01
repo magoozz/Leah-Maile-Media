@@ -37,17 +37,18 @@ html {
 
 body {
   background-color: #dad7cd;
+  margin-top: 16rem;
+
+  @media (max-width: 1164px) {
+    margin-top: 10.25rem;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 8.25rem;
+  }
 
   p {
     line-height: 1.75;
-  }
-}
-
-main {
-  margin-top: 8rem;
-
-  @media (max-width: 1164px) {
-    margin-top: 7.75rem;
   }
 }
 
@@ -133,7 +134,7 @@ main {
 
 
   a {
-    font-size: clamp(4rem, 3vw, 5rem);
+    font-size: 6rem;
     color: #dad7cd;
     font-weight: bold;
     font-family: "vogue";
@@ -169,10 +170,7 @@ main {
   align-items: center;
   justify-content: space-evenly;
   background-color: #dad7cd;
-
-  .instagram-desktop a::after {
-    background-color: #506248;
-  }
+  border-top: solid #bfbfbf 0.25rem;
 }
 
 .active-link {
@@ -199,6 +197,16 @@ main {
   position: relative;
   width: 100%;
   text-align: center;
+
+}
+
+.nav-links {
+  .instagram-desktop {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+  }
 }
 
 
