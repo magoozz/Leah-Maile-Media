@@ -23,7 +23,7 @@ export default function Navigation() {
             />
           </Link>
         </div>
-        <Link href="/">Leah Maile Media</Link>
+        <Link href="/"><p className="leah">Leah Maile</p></Link>
 
         {/* Instagram Icon for Mobile */}
         <a

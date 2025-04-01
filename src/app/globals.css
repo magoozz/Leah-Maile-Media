@@ -415,6 +415,14 @@ body {
       max-width: 800px;
       padding: 1rem;
 
+      @media (max-width: 1363px) {
+        align-items: center;
+
+        p {
+          max-width: 56rem;
+        }
+      }
+
       .title {
         margin-bottom: 2rem;
 
