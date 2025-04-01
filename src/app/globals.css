@@ -37,7 +37,7 @@ html {
 
 body {
   background-color: #dad7cd;
-  margin-top: 16rem;
+  margin-top: 14rem;
 
   @media (max-width: 1164px) {
     margin-top: 10.25rem;
@@ -80,15 +80,17 @@ body {
 
 .nav-links li.active {
   font-weight: bold;
-  color: #ff6600;
-  /* Highlight color */
-  border-bottom: 2px solid #ff6600;
-  /* Underline effect */
+  color: #fadadd;
+
 }
 
 .mobile-nav li.active {
   font-weight: bold;
-  color: #ff6600;
+  background-color: #506248;
+
+  a {
+    color: #fadadd;
+  }
 }
 
 
@@ -97,7 +99,7 @@ body {
   align-items: center;
   gap: 2rem;
   background-color: #506248;
-  padding: 1rem 0rem 1rem 7vw;
+  padding: 0.25rem 0rem 0.25rem 7vw;
 
   @media (max-width: 767px) {
     gap: 1rem;
@@ -168,48 +170,64 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #dad7cd;
-  border-top: solid #bfbfbf 0.25rem;
+  justify-content: flex-start;
+  background-color: #506248;
+  border-top: solid #fadadd 0.25rem;
+  padding-left: 5rem;
+
+  a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 10;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #fadadd;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .instagram-desktop a::after {
+    display: none;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
 }
 
-.active-link {
-  background-color: black;
-}
-
-.active-link::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #fadadd;
-}
 
 .nav-links li {
   text-decoration: none;
-  color: #506248;
-  font-size: 2.5rem;
-  font-weight: bold;
+  color: #bfbfbf;
+  font-size: 2.25rem;
+  font-weight: 800;
   font-family: "vogue";
   transition: color 0.3s ease;
   position: relative;
-  width: 100%;
+  width: 18%;
   text-align: center;
+  padding: 0rem;
 
 }
 
 .nav-links {
   .instagram-desktop {
     display: flex;
-    width: 50%;
+    width: 0%;
     height: 100%;
+    margin-left: 22%;
     justify-content: center;
   }
 }
 
-
+/* underline draw
 .nav-links li::after {
   content: "";
   position: absolute;
@@ -220,10 +238,10 @@ body {
   background-color: #fadadd;
   transition: width 0.3s ease;
 }
+*/
 
 .nav-links li:hover {
   color: #fadadd;
-  background-color: #506248;
   height: 100%;
 }
 

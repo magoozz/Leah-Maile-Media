@@ -18,8 +18,8 @@ export default function Navigation() {
             <Image
               src="/images/logo-stamp-filled.svg"
               alt="Leah Maile Media, ESTD 2018, Capturing the moment. Flower graphic"
-              width={100}
-              height={100}
+              width={125}
+              height={125}
             />
           </Link>
         </div>
@@ -49,12 +49,12 @@ export default function Navigation() {
       <ul className="nav-links col-md-12">
         {[
           { label: "Meet Leah", href: "/about" },
-          { label: "Info", href: "/experience" },
+          { label: "Information", href: "/experience" },
           { label: "Portfolio", href: "/portfolio" },
           { label: "Contact me!", href: "/contact" },
         ].map(({ label, href }) => (
           <li key={href} className={pathname === href ? "active" : ""}>
-            <Link href={href} className="block w-full h-full p-2">
+            <Link href={href} className="block py-2">
               {label}
             </Link>
           </li>
@@ -76,7 +76,7 @@ export default function Navigation() {
       {isOpen && (
         <ul className="mobile-nav">
           {[
-            { label: "About", href: "/about" },
+            { label: "Meet Leah", href: "/about" },
             { label: "Info", href: "/experience" },
             { label: "Portfolio", href: "/portfolio" },
             { label: "Contact me!", href: "/contact" },
