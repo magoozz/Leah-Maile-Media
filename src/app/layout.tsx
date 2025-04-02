@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Navigation from "../components/Navigation";
+import NavigationTwo from "../components/NavigationTwo";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <title>Leah Maile Media</title>
       </head>
       <body>
-      <Navigation />
+      <NavigationTwo />
         <main>{children}</main>
         <Footer />
       </body>

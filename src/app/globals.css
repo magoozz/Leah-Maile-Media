@@ -37,18 +37,183 @@ html {
 
 body {
   background-color: #dad7cd;
-  margin-top: 14rem;
+  z-index: 1;
+  margin-top: 5.25rem;
 
-  @media (max-width: 1164px) {
-    margin-top: 10.25rem;
-  }
-
-  @media (max-width: 767px) {
-    margin-top: 8.25rem;
+  @media (max-width: 790px) {
+    margin-top: 4rem;
   }
 
   p {
     line-height: 1.75;
+  }
+}
+
+.navigationTwo {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #506248;
+
+  @media (max-width: 790px) {
+    width: 100vw;
+  }
+
+  button {
+    color: #dad7cd;
+  }
+
+  .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 790px) {
+      width: 65vw;
+
+      .title {
+        margin-right: 0rem;
+        font-size: 2.75rem !important;
+      }
+    }
+
+    @media (max-width: 465px) {
+      width: 80vw;
+
+      .title {
+        margin-right: 0rem;
+        font-size: 2.25rem !important;
+      }
+    }
+
+    .title {
+      font-size: 3.5rem;
+      color: #dad7cd;
+      font-weight: bold;
+      font-family: "vogue";
+      text-decoration: none;
+
+    }
+
+    .title:hover {
+      color: #fadadd;
+
+    }
+
+    .stamp {
+      position: absolute;
+      top: 5%;
+      left: 0;
+      width: clamp(80px, 12vw, 225px);
+      height: clamp(80px, 12vw, 225px);
+    }
+  }
+
+  .links {
+    position: relative;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #dad7cd;
+
+    .ig-icon {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  }
+
+  .fullpage-color {
+    color: #506248;
+  }
+
+  .fullpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #dad7cd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 40;
+    transition: opacity 0.3s ease-in-out;
+
+    .stamp-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      a {
+        width: clamp(80px, 12vw, 225px);
+        height: clamp(80px, 12vw, 225px);
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-items: flex-start;
+      width: 14vw;
+
+      li {
+        a {
+          position: relative;
+          text-decoration: none;
+          display: inline-block;
+          color: #506248;
+        }
+
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 10;
+          left: 50%;
+          width: 0%;
+          height: 2px;
+          background-color: #fadadd;
+          transition: width 0.3s ease, left 0.3s ease;
+          transform: translateX(-50%);
+        }
+        a:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .link {
+      text-align: left;
+    }
+  }
+
+  .fullpage a {
+    margin: 15px 0;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+
+  .fullpage button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .fullpage a.mt-6:hover {
+    color: #f5a623;
   }
 }
 
@@ -167,7 +332,7 @@ body {
   }
 }
 
-.nav-links {
+.nav-linkss {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -203,7 +368,7 @@ body {
 }
 
 
-.nav-links li {
+.nav-linkss li {
   text-decoration: none;
   color: #bfbfbf;
   font-size: 2.25rem;
@@ -217,7 +382,7 @@ body {
 
 }
 
-.nav-links {
+.nav-linkss {
   .instagram-desktop {
     display: flex;
     width: 0%;
@@ -427,7 +592,7 @@ body {
         margin-bottom: 2rem;
 
         @media (max-width: 1363px) {
-          margin-bottom: 1rem;
+          margin-bottom: 0;
 
           h1 {
             font-size: 3rem !important;
@@ -628,11 +793,17 @@ body {
 
       .services-image-cluster {
         position: absolute;
-        width: clamp(400px, 47vw, 750px); /* Responsive width */
-        top: -8%;
+        width: clamp(400px, 47vw, 750px);
+        /* Responsive width */
+        top: -11%;
         left: 5%;
         aspect-ratio: 1/1;
         z-index: -1;
+        margin-top: 1rem;
+
+        @media (max-width: 1412px) {
+          top: -7%;
+        }
 
         img {
           max-width: 100%;
@@ -819,6 +990,7 @@ body {
       #bfbfbf 50%);
   background-size: 40px 40px;
   min-height: 100vh;
+  background-attachment: fixed;
 
   .portfolio-title {
     margin-bottom: 2rem;
@@ -851,6 +1023,7 @@ body {
 }
 
 
+/* CONTACT FORM */
 .contact {
   form {
     margin: 5rem !important;
