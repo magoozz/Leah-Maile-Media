@@ -41,7 +41,7 @@ body {
   margin-top: 5.25rem;
 
   @media (max-width: 790px) {
-    margin-top: 4rem;
+    margin-top: 3.25rem !important;
   }
 
   p {
@@ -73,7 +73,7 @@ body {
     align-items: center;
 
     @media (max-width: 790px) {
-      width: 65vw;
+      width: 70vw !important;
 
       .title {
         margin-right: 0rem;
@@ -149,8 +149,10 @@ body {
 
     .stamp-inner {
       position: absolute;
-      top: 0;
+      top: 1.5%;
       left: 0;
+      width: clamp(80px, 12vw, 225px);
+      height: clamp(80px, 12vw, 225px);
 
       a {
         width: clamp(80px, 12vw, 225px);
