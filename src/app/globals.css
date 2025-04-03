@@ -115,7 +115,7 @@ body {
 
       @media (max-width: 400px) {
         left: -4%;
-        
+
       }
     }
   }
@@ -774,25 +774,54 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
 
-  .portfolio-title {
-    margin-bottom: 2rem;
+  .title-wrapper {
+    padding: 2rem 0;
     background-color: #bfbfbf;
 
-    h1 {
-      font-weight: bold;
-      font-size: clamp(3.5rem, 4vw, 7rem);
-      font-weight: bold;
-      font-family: "vogue";
-      margin-left: 4rem;
+    .portfolio-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 10%;
+
+      h1 {
+        font-weight: bold;
+        font-size: 5rem;
+        font-family: "vogue";
+        margin-left: 4rem;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-top: -1.5rem;
+        font-size: 2rem;
+        font-family: "Wonderful Branding", sans-serif;
+        margin-left: 8rem;
+      }
     }
 
-    h2 {
-      margin-top: -1.5rem;
-      font-size: 3rem;
-      font-family: "daydream", sans-serif;
-      margin-left: 8rem;
+    @media (max-width: 768px) {
+      .portfolio-title {
+        margin-left: 5%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-title {
+        margin-left: 5%;
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        h2 {
+          margin-top: -0.5rem;
+          font-size: 1rem;
+        }
+      }
     }
   }
+
 
   .image-slot {
     margin-bottom: 2rem;

@@ -62,7 +62,7 @@ export default function Navigation() {
 
           <div className="floral">
             <Image
-              src="/images/green-watermark.svg"
+              src="/images/nav/green-watermark.svg"
               alt="Flowers Graphic"
               width={250}
               height={250}
@@ -71,7 +71,7 @@ export default function Navigation() {
 
           <div className="stamps">
               <Image
-                src="/images/nav-stamps.svg"
+                src="/images/nav/nav-stamps.svg"
                 alt="Two stamps of images overlaying eachother. One of a forest and one of a girl smiling with flowers."
                 width={400}
                 height={400}
@@ -82,7 +82,7 @@ export default function Navigation() {
 
             <div className="polaroid">
               <Image
-                src="/images/nav-polaroid.svg"
+                src="/images/nav/nav-polaroid.svg"
                 alt="Tapped polaroid of a couple twirling in a sunset forest"
                 width={500}
                 height={500}

@@ -37,9 +37,11 @@ const breakpointColumns = {
 const PhotoGrid = () => {
   return (
     <div className="portfolio">
-      <div className="portfolio-title col-md-12">
-        <h1>Here to capture</h1>
-        <h2>your special moments</h2>
+      <div className="title-wrapper col-md-12">
+        <div className="portfolio-title col-md-10">
+          <h1>Capturing</h1>
+          <h2>your special moments</h2>
+        </div>
       </div>
       <div className="p-15">
         <Masonry
