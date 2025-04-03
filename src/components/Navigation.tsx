@@ -73,14 +73,14 @@ export default function Navigation() {
               <Image
                 src="/images/nav/nav-stamps.svg"
                 alt="Two stamps of images overlaying eachother. One of a forest and one of a girl smiling with flowers."
-                width={400}
-                height={400}
+                width={450}
+                height={450}
               />
             </div>
 
-          <div className="nav col-md-8">
+          <div className="nav col-md-12">
 
-            <div className="polaroid">
+            <div className="nav-polaroid">
               <Image
                 src="/images/nav/nav-polaroid.svg"
                 alt="Tapped polaroid of a couple twirling in a sunset forest"

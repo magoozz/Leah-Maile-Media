@@ -10,8 +10,8 @@ import Link from "next/link";
 const images = [
   "/images/portfolio/clif.jpg",
   "/images/portfolio/grad_1.jpg",
+  "/images/sunflower.jpg",
   "/images/portfolio/emily_leaf.jpg",
-  "/images/portfolio/aj_1.jpg",
 ];
 
 const testimonials = [
@@ -164,7 +164,7 @@ export default function Home() {
       <div className="image-break">
         <Image
           className="image"
-          src="/images/portfolio/grad_15.jpg"
+          src="/images/trees.jpeg"
           alt="LeahP"
           width={1920}
           height={1080}
