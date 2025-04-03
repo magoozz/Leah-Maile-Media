@@ -212,6 +212,10 @@ body {
         height: 35vh;
       }
 
+      @media (max-width: 630px) {
+        margin-left: 1rem;
+      }
+
       li.active a {
         color: #506248;
         font-weight: bold;
