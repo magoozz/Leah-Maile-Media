@@ -112,6 +112,11 @@ body {
       left: 0;
       width: clamp(120px, 12vw, 225px);
       height: clamp(120px, 12vw, 225px);
+
+      @media (max-width: 400px) {
+        left: -3%;
+        
+      }
     }
   }
 
@@ -182,8 +187,8 @@ body {
       }
 
       @media (max-width: 1058px) {
-        width: 150px;
-        top: 10% !important;
+        width: 175px;
+        top: 13% !important;
         right: 10% !important;
       }
     }
