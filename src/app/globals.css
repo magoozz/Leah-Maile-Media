@@ -49,7 +49,9 @@ body {
   }
 }
 
-.navigationTwo {
+
+/* NAVIGATION */
+.navigation {
   position: absolute;
   z-index: 100;
   top: 0;
@@ -172,7 +174,7 @@ body {
     .nav {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
 
       @media (max-width: 550px) {
 
@@ -186,10 +188,30 @@ body {
       flex-direction: column;
       align-items: center;
       align-items: flex-start;
-      width: 14vw;
+      width: 20vw;
+
+      li.active a {
+        color: #fadadd; /* Change text color for active link */
+        font-weight: bold; /* Make it stand out */
+        position: relative;
+      }
+      
+      li.active a::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: #fadadd;
+        transform: translateX(-50%);
+      }
 
       .mobile-item {
-        margin: 0rem;
+        font-weight: bold;
+        font-family: "vogue";
+        font-size: 2.5rem;
+        margin: 0.5rem;
       }
 
       
@@ -251,324 +273,6 @@ body {
     border: none;
     color: white;
     cursor: pointer;
-  }
-
-  .fullpage a.mt-6:hover {
-    color: #f5a623;
-  }
-}
-
-/* NAVIGATION */
-.navigation {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 1164px) {
-    flex-direction: row;
-    justify-content: center;
-    padding: 1rem 3rem;
-    background-color: #506248;
-
-  }
-
-  @media (max-width: 767px) {
-    padding: 1rem;
-  }
-}
-
-.nav-links li.active {
-  font-weight: bold;
-  color: #fadadd;
-
-}
-
-.mobile-nav li.active {
-  font-weight: bold;
-  background-color: #506248;
-
-  a {
-    color: #fadadd;
-  }
-}
-
-
-.nav-name {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  background-color: #506248;
-  padding: 0.25rem 0rem 0.25rem 7vw;
-
-  @media (max-width: 767px) {
-    gap: 1rem;
-    padding: 0;
-
-    a {
-      text-align: center;
-    }
-  }
-
-  .stamp {
-    position: relative;
-    display: inline-block;
-  }
-
-  .stamp img {
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .stamp .stamp-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-
-  .stamp:hover .stamp-default {
-    opacity: 0;
-  }
-
-  .stamp:hover .stamp-hover {
-    opacity: 1;
-  }
-
-
-  a {
-    font-size: 6rem;
-    color: #dad7cd;
-    font-weight: bold;
-    font-family: "vogue";
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #fadadd;
-
-  }
-
-  @media (max-width: 1164px) {
-
-    .stamp {
-      max-width: 100px;
-      height: auto;
-    }
-
-    a {
-      font-size: 3rem;
-    }
-  }
-
-  @media (max-width: 767px) {
-    a {
-      font-size: 2rem;
-    }
-  }
-}
-
-.nav-linkss {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #506248;
-  border-top: solid #fadadd 0.25rem;
-  padding-left: 5rem;
-
-  a {
-    position: relative;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  a::after {
-    content: "";
-    position: absolute;
-    bottom: 10;
-    left: 50%;
-    width: 0%;
-    height: 2px;
-    background-color: #fadadd;
-    transition: width 0.3s ease, left 0.3s ease;
-    transform: translateX(-50%);
-  }
-
-  .instagram-desktop a::after {
-    display: none;
-  }
-
-  a:hover::after {
-    width: 100%;
-  }
-}
-
-
-.nav-linkss li {
-  text-decoration: none;
-  color: #bfbfbf;
-  font-size: 2.25rem;
-  font-weight: 800;
-  font-family: "vogue";
-  transition: color 0.3s ease;
-  position: relative;
-  width: 18%;
-  text-align: center;
-  padding: 0rem;
-
-}
-
-.nav-linkss {
-  .instagram-desktop {
-    display: flex;
-    width: 0%;
-    height: 100%;
-    margin-left: 22%;
-    justify-content: center;
-  }
-}
-
-/* underline draw
-.nav-links li::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #fadadd;
-  transition: width 0.3s ease;
-}
-*/
-
-.nav-links li:hover {
-  color: #fadadd;
-  height: 100%;
-}
-
-.nav-links li:hover::after {
-  width: 100%;
-}
-
-.instagram-mobile {
-  position: relative;
-  display: block;
-  font-size: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.instagram-mobile:hover {
-  transform: scale(1.2);
-  color: #fadadd;
-}
-
-.instagram-mobile::after {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-
-/* Mobile Menu */
-
-.mobile-nav {
-  display: none;
-}
-
-.mobile-nav.open {
-  display: flex;
-}
-
-.instagram-mobile {
-  display: none;
-}
-
-.instagram-desktop {
-  display: block;
-}
-
-.toggle {
-  color: #dad7cd;
-}
-
-@media (max-width: 1164px) {
-  .nav-links {
-    display: none;
-  }
-
-  .instagram-mobile {
-    display: block;
-    margin-left: 0.5rem;
-  }
-
-  .instagram-desktop {
-    display: none;
-  }
-
-  .toggle {
-    display: block;
-  }
-
-  .mobile-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 50%;
-    background-color: #dad7cd;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    z-index: 1000;
-  }
-
-  .mobile-nav li {
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #bfbfbf;
-  }
-
-  .mobile-nav li:last-child {
-    border-bottom: 1px solid #bfbfbf;
-  }
-
-  .mobile-nav a {
-    display: block;
-    padding: 1rem;
-    text-decoration: none;
-    color: #506248;
-    font-weight: bold;
-    font-family: "vogue";
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease;
-  }
-
-  .mobile-nav a:hover {
-    background-color: #506248;
-    color: #fadadd;
-  }
-
-  .mobile-item {
-    font-weight: bold;
-    font-family: "vogue";
-    padding: 1rem;
-  }
-}
-
-
-@media (min-width: 1165px) {
-  .toggle {
-    display: none;
   }
 }
 

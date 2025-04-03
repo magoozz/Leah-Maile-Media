@@ -1,97 +1,107 @@
 "use client";
 import { useState } from "react";
-import { usePathname } from "next/navigation"; // Import usePathname
-import Image from 'next/image';
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname();
 
   return (
-    <nav className="navigation">
-      <div className="nav-name col-md-12">
-        <div className="stamp">
-          <Link href="/">
-            <Image
-              src="/images/logo-stamp-filled.svg"
-              alt="Leah Maile Media, ESTD 2018, Capturing the moment. Flower graphic"
-              width={125}
-              height={125}
-            />
-          </Link>
-        </div>
-        <Link href="/"><p className="leah">Leah Maile</p></Link>
-
-        {/* Instagram Icon for Mobile */}
+    <nav className="navigation col-md-12">
+      {/* Logo and Name */}
+      <div className="items col-md-7">
+        <Link href="/">
+          <Image
+            src="/images/logo-stamp-filled-inv.svg"
+            alt="Leah Maile Media Logo"
+            className="stamp"
+            width={75}
+            height={75}
+          />
+        </Link>
+        <Link href="/" className="title">Leah Maile</Link>
+      </div>
+      <div className="links">
         <a
           href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#"
           target="_blank"
           rel="noopener noreferrer"
-          className="instagram-mobile"
+          className={`ig-icon ${isOpen ? "fullpage-color" : "default-color"}`}
         >
-          <FaInstagram size={30} className="ig-icon" />
+          <FaInstagram size={40} />
         </a>
+
+
+        <button
+          className="p-2 z-50"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {isOpen ? <X size={40} color="#506248" /> : <Menu size={40} />}
+        </button>
       </div>
 
-      {/* Mobile Menu Button */}
-      <button
-        className="toggle md:hidden p-2"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle navigation menu"
-      >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
 
-      {/* Desktop Navigation */}
-      <ul className="nav-links col-md-12">
-        {[
-          { label: "Meet Leah", href: "/about" },
-          { label: "Information", href: "/experience" },
-          { label: "Portfolio", href: "/portfolio" },
-          { label: "Contact me!", href: "/contact" },
-        ].map(({ label, href }) => (
-          <li key={href} className={pathname === href ? "active" : ""}>
-            <Link href={href} className="block py-2">
-              {label}
-            </Link>
-          </li>
-        ))}
-
-        {/* Instagram Icon for Desktop */}
-        <li className="instagram-desktop" key="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#">
-          <Link
-            href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram size={40} className="ig-icon" />
-          </Link>
-        </li>
-      </ul>
-
-      {/* Mobile Navigation */}
+      {/* Full Page Overlay Menu */}
       {isOpen && (
-        <ul className="mobile-nav">
-          {[
-            { label: "Meet Leah", href: "/about" },
-            { label: "Info", href: "/experience" },
-            { label: "Portfolio", href: "/portfolio" },
-            { label: "Contact me!", href: "/contact" },
-          ].map(({ label, href }) => (
-            <li key={href} className={pathname === href ? "active" : ""}>
-              <Link
-                href={href}
-                className="mobile-item"
-                onClick={() => setIsOpen(false)}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="fullpage">
+          <div className="stamp-inner">
+            <Link href="/">
+              <Image
+                src="/images/logo-stamp-filled.svg"
+                alt="Leah Maile Media Logo"
+                width={225}
+                height={225}
+              />
+            </Link>
+          </div>
+
+          <div className="floral">
+            <Image
+              src="/images/green-watermark.svg"
+              alt="Leah Maile Media Logo"
+              width={300}
+              height={400}
+            />
+          </div>
+
+          <div className="nav col-md-8">
+
+            <div className="polaroid">
+              <Image
+                src="/images/nav-polaroid.svg"
+                alt="Leah Maile Media Logo"
+                width={500}
+                height={500}
+              />
+            </div>
+
+
+            <ul className="nav-links">
+              {[
+                { label: "Meet Leah", href: "/about" },
+                { label: "Information", href: "/experience" },
+                { label: "Portfolio", href: "/portfolio" },
+                { label: "Contact me!", href: "/contact" },
+              ].map(({ label, href }) => (
+                <li key={href} className={pathname === href ? "active" : ""}>
+                  <Link
+                    href={href}
+                    className="mobile-item"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
       )}
     </nav>
   );
