@@ -114,7 +114,7 @@ body {
       height: clamp(120px, 12vw, 225px);
 
       @media (max-width: 400px) {
-        left: -5%;
+        left: -4%;
         
       }
     }
