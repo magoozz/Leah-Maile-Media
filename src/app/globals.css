@@ -41,7 +41,7 @@ body {
   margin-top: 5.25rem;
 
   @media (max-width: 790px) {
-    margin-top: 3.25rem !important;
+    margin-top: 3.5rem !important;
   }
 
   p {
@@ -114,7 +114,7 @@ body {
       height: clamp(120px, 12vw, 225px);
 
       @media (max-width: 400px) {
-        left: -3%;
+        left: -5%;
         
       }
     }
