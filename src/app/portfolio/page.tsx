@@ -38,9 +38,18 @@ const PhotoGrid = () => {
   return (
     <div className="portfolio">
       <div className="title-wrapper col-md-12">
-        <div className="portfolio-title col-md-10">
+        <div className="portfolio-title col-md-12">
           <h1>Capturing</h1>
-          <h2>your special moments</h2>
+          <div className="bottom">
+            <Image
+              src="/images/portfolio/camera.svg"
+              alt="Drawing of a camera"
+              className = "icon"
+              width={70}
+              height={70}
+            />
+            <h2>your special moments</h2>
+          </div>
         </div>
       </div>
       <div className="p-15">

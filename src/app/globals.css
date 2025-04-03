@@ -786,37 +786,59 @@ body {
 
       h1 {
         font-weight: bold;
-        font-size: 5rem;
+        font-size: 6rem;
         font-family: "vogue";
         margin-left: 4rem;
         text-transform: uppercase;
       }
 
-      h2 {
+      .bottom {
+        display: flex;
+        align-items: center;
+        margin-left: 6rem;
         margin-top: -1.5rem;
-        font-size: 2rem;
-        font-family: "Wonderful Branding", sans-serif;
-        margin-left: 8rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .portfolio-title {
-        margin-left: 5%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .portfolio-title {
-        margin-left: 5%;
-
-        h1 {
-          font-size: 3rem;
-        }
 
         h2 {
           margin-top: -0.5rem;
-          font-size: 1rem;
+          margin-left: 1rem;
+          font-size: 1.75rem;
+          font-family: "Wonderful Branding", sans-serif;
+        }
+      }
+
+    }
+
+
+
+    @media (max-width: 768px) {
+      .portfolio-title {
+        align-items: center;
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 610px) {
+      .portfolio-title {
+        margin-top: 1.5rem;
+
+        h1 {
+          font-size: 4rem;
+          margin-left: 0;
+        }
+
+        .bottom {
+          margin-left: 0.5rem;
+
+          .icon {
+            max-width: 60px;
+            height: auto;
+          }
+
+          margin-left: 1rem;
+
+          h2 {
+            font-size: 1.15rem;
+          }
         }
       }
     }
