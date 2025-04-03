@@ -95,7 +95,7 @@ export default function Navigation() {
                 { label: "Meet Leah", href: "/about" },
                 { label: "Information", href: "/experience" },
                 { label: "Portfolio", href: "/portfolio" },
-                { label: "Contact me!", href: "/contact" },
+                { label: "Contact", href: "/contact" },
               ].map(({ label, href }) => (
                 <li key={href} className={pathname === href ? "active" : ""}>
                   <Link
