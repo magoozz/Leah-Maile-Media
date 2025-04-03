@@ -63,18 +63,27 @@ export default function Navigation() {
           <div className="floral">
             <Image
               src="/images/green-watermark.svg"
-              alt="Leah Maile Media Logo"
-              width={300}
-              height={400}
+              alt="Flowers Graphic"
+              width={250}
+              height={250}
             />
           </div>
+
+          <div className="stamps">
+              <Image
+                src="/images/nav-stamps.svg"
+                alt="Two stamps of images overlaying eachother. One of a forest and one of a girl smiling with flowers."
+                width={400}
+                height={400}
+              />
+            </div>
 
           <div className="nav col-md-8">
 
             <div className="polaroid">
               <Image
                 src="/images/nav-polaroid.svg"
-                alt="Leah Maile Media Logo"
+                alt="Tapped polaroid of a couple twirling in a sunset forest"
                 width={500}
                 height={500}
               />
