@@ -241,7 +241,11 @@ body {
 
           li.active a {
             font-size: 1.5rem !important;
+            position: relative; /* Ensure positioning context */
+            text-decoration: underline 2px #506248;
+            text-underline-offset: 0.5rem;
           }
+        
         }
 
         li.active a {
