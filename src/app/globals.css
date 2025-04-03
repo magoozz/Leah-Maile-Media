@@ -184,6 +184,8 @@ body {
 
       @media (max-width: 1058px) {
         width: 250px;
+        top: 72% !important;
+        right: 30vw !important;
       }
     }
 
@@ -206,6 +208,10 @@ body {
 
       @media (max-width: 1352px) {
         height: 53vh;
+      }
+
+      @media (max-width: 630px) {
+        height: 35vh;
       }
 
       li.active a {
@@ -235,7 +241,7 @@ body {
       }
 
 
-      @media (max-width: 550px) {
+      @media (max-width: 630px) {
         li {
           .mobile-item {
             font-size: 1rem;
