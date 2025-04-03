@@ -154,8 +154,8 @@ body {
       position: absolute;
       top: 1.5%;
       left: 0;
-      width: clamp(80px, 12vw, 225px);
-      height: clamp(80px, 12vw, 225px);
+      width: clamp(150px, 12vw, 225px);
+      height: clamp(150px, 12vw, 225px);
     }
 
     .floral {
