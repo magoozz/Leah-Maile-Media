@@ -32,7 +32,7 @@ export default function NavigationTwo() {
           rel="noopener noreferrer"
           className={`ig-icon ${isOpen ? "fullpage-color" : "default-color"}`}
         >
-          <FaInstagram size={30} />
+          <FaInstagram size={40} />
         </a>
 
 
@@ -41,7 +41,7 @@ export default function NavigationTwo() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation menu"
         >
-          {isOpen ? <X size={30} color="#506248" /> : <Menu size={30} />}
+          {isOpen ? <X size={40} color="#506248" /> : <Menu size={40} />}
         </button>
       </div>
 
@@ -60,25 +60,47 @@ export default function NavigationTwo() {
             </Link>
           </div>
 
+          <div className="floral">
+            <Image
+              src="/images/green-watermark.svg"
+              alt="Leah Maile Media Logo"
+              width={300}
+              height={400}
+            />
+          </div>
 
-          <ul className="nav-links col-md-1">
-            {[
-              { label: "Meet Leah", href: "/about" },
-              { label: "Info", href: "/experience" },
-              { label: "Portfolio", href: "/portfolio" },
-              { label: "Contact me!", href: "/contact" },
-            ].map(({ label, href }) => (
-              <li key={href} className={pathname === href ? "active" : ""}>
-                <Link
-                  href={href}
-                  className="mobile-item"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="nav col-md-10">
+
+            <div className="polaroid">
+              <Image
+                src="/images/nav-polaroid.svg"
+                alt="Leah Maile Media Logo"
+                width={500}
+                height={500}
+              />
+            </div>
+
+
+            <ul className="nav-links">
+              {[
+                { label: "Meet Leah", href: "/about" },
+                { label: "Information", href: "/experience" },
+                { label: "Portfolio", href: "/portfolio" },
+                { label: "Contact me!", href: "/contact" },
+              ].map(({ label, href }) => (
+                <li key={href} className={pathname === href ? "active" : ""}>
+                  <Link
+                    href={href}
+                    className="mobile-item"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
         </div>
       )}
     </nav>

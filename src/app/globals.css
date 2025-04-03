@@ -146,6 +146,8 @@ body {
     font-size: 2rem;
     z-index: 40;
     transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
+
 
     .stamp-inner {
       position: absolute;
@@ -153,11 +155,30 @@ body {
       left: 0;
       width: clamp(80px, 12vw, 225px);
       height: clamp(80px, 12vw, 225px);
+    }
 
-      a {
-        width: clamp(80px, 12vw, 225px);
-        height: clamp(80px, 12vw, 225px);
+    .floral {
+      position: absolute;
+      bottom: 0;
+      right: -5%;
+      width: 400px;
+      height: auto;
+
+      @media (max-width: 1058px) {
+        display: none;
       }
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 550px) {
+
+    }
+
+
     }
 
     .nav-links {
@@ -166,6 +187,23 @@ body {
       align-items: center;
       align-items: flex-start;
       width: 14vw;
+
+      .mobile-item {
+        margin: 0rem;
+      }
+
+      
+      @media (max-width: 550px) {
+        li {
+          .mobile-item {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      @media (max-width: 1352px) {
+        width: 60vw !important;
+      }
 
       li {
         a {
@@ -186,6 +224,7 @@ body {
           transition: width 0.3s ease, left 0.3s ease;
           transform: translateX(-50%);
         }
+
         a:hover::after {
           width: 100%;
         }

@@ -149,7 +149,7 @@ export default function Home() {
           </div>
 
           <div className="services-content col-md-5">
-            <p>If youre looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal.
+            <p>If you&apos;re looking for a passionate and welcoming photographer who&apos;s ready to go above and beyond to make your experience unforgettable, I&apos;m your gal.
               I truly believe in creating connections with my clients, and it means the world to me when they say, “I feel like we&apos;re friends.” The truth is, we absolutely are.
               I&apos;m here to capture your moments, make you feel comfortable, and help tell your story in a way that feels personal and real.</p>
             <Link href="/portfolio" className="s-button">
