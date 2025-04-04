@@ -8,16 +8,15 @@ export default function About() {
     <div className="about-page col-md-12">
       <div className="intro">
         <div className="leah-cluster col-md-6">
-
           <Image
             src="/images/about/leah-cluster.svg"
             alt="LeahP"
-            width={1200} // Adjust width and height as needed
+            width={1200}
             height={1200}
           />
         </div>
         <div className="leah-wrapper col-md-5">
-          <h1>I&apos;m Leah!</h1>
+          <h1>Hi I&apos;m Leah!</h1>
           <h2>Photographer, educator, animal lover, always outside . . .</h2>
           <div className="leah-text">
             <p>Nice to meet you, I&apos;m a photographer based out of Washington State who is devoted to capturing those special
@@ -29,11 +28,29 @@ export default function About() {
         </div>
       </div>
       <div className="facts">
-        <Link href="/experience" className="button">
-          <div className="leah-polariod">
-            <Image src="/images/work-p.svg" alt="Girl smiling with her eyes closed holding babies breath 'check out my work!'" width={350} height={350} />
+
+      </div>
+      <div className="picture-bar">
+        <Image
+          src="/images/about/bar.jpg"
+          alt="LeahP"
+          layout="intrinsic"
+          width={1750}
+          height={10}
+        />
+      </div>
+      <div className="work">
+        <div className="check-out col-md-12">
+          <h2>I cannot wait to meet you!</h2>
+          <div className="bottom">
+            <h3>Let&apos;s get something on the books:</h3>
+            <Link href="/contact" className="con-button">
+              <div className="note">
+                <Image src="/images/about/contact-me.svg" alt="Get to know me note" width={150} height={150} />
+              </div>
+            </Link>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );

@@ -93,7 +93,7 @@ export default function Navigation() {
             <ul className="nav-links">
               {[
                 { label: "Meet Leah", href: "/about" },
-                { label: "Information", href: "/experience" },
+                { label: "Experience", href: "/experience" },
                 { label: "Portfolio", href: "/portfolio" },
                 { label: "Contact", href: "/contact" },
               ].map(({ label, href }) => (
