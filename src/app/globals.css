@@ -797,6 +797,10 @@ body {
         p {
           font-size: 1.5rem;
           font-family: "Typewriter";
+
+          @media (max-width: 790px) {
+            font-size: 0.75rem;
+          }
         }
       }
 
