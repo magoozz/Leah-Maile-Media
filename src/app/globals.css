@@ -761,14 +761,22 @@ body {
 
 .about-page {
   margin-top: 8rem;
+  /* background-color: #fadadd; */
 
   @media (max-width: 1440px) {
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
 
   .intro {
     display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
+
+    .leah-cluster {
+      @media (max-width: 1440px) {
+        width: 80vw;
+      }
+    }
 
     .leah-wrapper {
       background-color: #506248;
@@ -783,12 +791,23 @@ body {
         font-size: 5rem;
         font-weight: bold;
         font-family: "vogue";
+
+        @media (max-width: 768px) {
+          padding: 0 2rem;
+          font-size: 3.5rem;
+        }
       }
 
       h2 {
         margin-bottom: 1.5rem;
         font-family: "Wonderful Branding";
         padding: 0 2.5rem;
+
+        @media (max-width: 768px) {
+          padding: 0 2.75rem;
+          font-size: 0.75rem;
+          text-align: center;
+        }
       }
 
       .leah-text {
@@ -841,7 +860,7 @@ body {
 
   .button {
     position: absolute;
-    top: 130%;
+    bottom: -79%;
     right: 5%;
     height: 1rem;
     padding: -3rem;

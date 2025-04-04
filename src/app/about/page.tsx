@@ -29,13 +29,12 @@ export default function About() {
         </div>
       </div>
       <div className="facts">
-
+        <Link href="/experience" className="button">
+          <div className="leah-polariod">
+            <Image src="/images/work-p.svg" alt="Girl smiling with her eyes closed holding babies breath 'check out my work!'" width={350} height={350} />
+          </div>
+        </Link>
       </div>
-      <Link href="/experience" className="button">
-        <div className="leah-polariod">
-          <Image src="/images/work-p.svg" alt="Girl smiling with her eyes closed holding babies breath 'check out my work!'" width={350} height={350} />
-        </div>
-      </Link>
     </div>
   );
 }
