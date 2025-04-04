@@ -16,7 +16,7 @@ export default function About() {
           />
         </div>
         <div className="leah-wrapper col-md-5">
-          <h1>Hi I&apos;m Leah!</h1>
+          <h1>I&apos;m Leah!</h1>
           <h2>Photographer, educator, animal lover, always outside . . .</h2>
           <div className="leah-text">
             <p>Nice to meet you, I&apos;m a photographer based out of Washington State who is devoted to capturing those special
