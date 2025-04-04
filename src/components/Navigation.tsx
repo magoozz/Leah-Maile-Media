@@ -78,7 +78,7 @@ export default function Navigation() {
               />
             </div>
 
-          <div className="nav col-md-12">
+          <div className="nav col-md-12 ">
 
             <div className="nav-polaroid">
               <Image
