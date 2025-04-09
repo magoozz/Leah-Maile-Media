@@ -19,10 +19,10 @@ export default function FlipCard({ frontImage, backImage, alt }: FlipCardProps) 
     >
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <Image src={frontImage} alt={alt} width={400} height={400} />
+          <Image src={frontImage} alt={alt} layout="intrinsic" width={400} height={400} />
         </div>
         <div className="flip-card-back">
-          <Image src={backImage} alt={`${alt} back`} width={400} height={400} />
+          <Image src={backImage} alt={`${alt} back`} layout="intrinsic" width={400} height={400} />
         </div>
       </div>
     </div>
