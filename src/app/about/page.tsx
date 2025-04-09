@@ -18,7 +18,7 @@ export default function About() {
         </div>
         <div className="leah-wrapper col-md-5">
           <h1>I&apos;m Leah!</h1>
-          <h2>Photographer, educator, animal lover, always outside . . .</h2>
+          <h2>Photographer, educator, animal lover, adventure seeker . . .</h2>
           <div className="leah-text">
             <p>Born and raised in Washington State, my love for the outdoors has always been a part of me. From a young age I have been inspired to
               capture the feeling of being in the moment, and nothing is more important to me then capturing your special moments! Well, except my students and passion

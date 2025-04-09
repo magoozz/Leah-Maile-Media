@@ -667,11 +667,6 @@ body {
   }
 
   @media (max-width: 790px) {
-    .image-parallax {
-      height: 50vw;
-      width: 10%;
-      height: auto;
-    }
 
   }
 
@@ -715,7 +710,6 @@ body {
         top: 22%;
         left: 18%;
         font-size: 1.2rem;
-        font-size: clamp(0.6rem, 2vw, 1.2rem);
         max-width: 29%;
 
         p {
@@ -723,9 +717,28 @@ body {
           line-height: 1.5 !important;
         }
 
+
+        @media (max-width: 990px) {
+          p {
+            font-size: 1rem !important;
+          }
+        }
+
         @media (max-width: 790px) {
           p {
-            font-size: 0.55rem;
+            font-size: 0.75rem !important;
+          }
+        }
+
+        @media (max-width: 650px) {
+          p {
+            font-size: 0.55rem !important;
+          }
+        }
+
+        @media (max-width: 450px) {
+          p {
+            font-size: 0.43rem !important;
           }
         }
       }
@@ -754,8 +767,18 @@ body {
   padding-bottom: 2rem;
   border-top: 1.5px solid black;
 
+  .stamp {
+    margin-top: 2rem;
+  }
+
   .footer-content {
     text-align: center;
+    color: #dad7cd;
+
+    .footer-content-top {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
@@ -1058,9 +1081,20 @@ body {
 
 }
 
+/* EXPEREINCE */
+.experience {
+  padding-top: 10rem;
+  height: 100vh;
+  text-align: center;
+}
+
 
 /* CONTACT FORM */
 .contact {
+  padding-top: 10rem;
+  height: 100vh;
+  text-align: center;
+
   form {
     margin: 5rem !important;
 
