@@ -424,6 +424,10 @@ body {
         font-family: "Typewriter";
         text-align: left;
 
+        @media (max-width: 790px) {
+          font-size: 1rem;
+        }
+
         @media (max-width: 1363px) {
           margin-top: -3rem;
           width: 76vw;
