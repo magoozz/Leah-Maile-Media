@@ -1,7 +1,9 @@
+// ./src/globals.d.ts
 export {};
 
 declare global {
   interface Window {
-    grecaptcha: any;
+    grecaptcha: ReCaptchaV2.ReCaptcha;
   }
 }
+
