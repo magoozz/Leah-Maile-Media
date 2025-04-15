@@ -27,7 +27,7 @@ function ContactForm() {
       <div className="form-items col-md-12">
       <div className="title-mobile col-md-8">
             <h1>Let&apos;s capture your most special moments!</h1>
-            <h2>I&apos;m so excited you&apos;re here, tell me everything!</h2>
+            <h2>I&apos;m so excited you&apos;re here, tell me everything...</h2>
           </div>
         <div className="form-img col-md-4">
           <Image
@@ -40,7 +40,7 @@ function ContactForm() {
         <div className="form col-md-4">
           <div className="title">
             <h1>Let&apos;s capture your most special moments!</h1>
-            <h2>I&apos;m so excited you&apos;re here, tell me everything!</h2>
+            <h2>I&apos;m so excited you&apos;re here, tell me everything...</h2>
           </div>
           <form onSubmit={handleSubmit}>
             <div className="name">
