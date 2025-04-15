@@ -8,10 +8,13 @@ import { AnimatePresence } from "framer-motion"; // Import AnimatePresence
 import Link from "next/link";
 
 const images = [
+  "/images/portfolio/spinny.jpg",
+  "/images/portfolio/greta_sunflower.jpg",
+  "/images/portfolio/mk_balloon.jpg",
   "/images/portfolio/clif.jpg",
+  "/images/portfolio/redCouple.jpg",
   "/images/portfolio/grad_1.jpg",
-  "/images/sunflower.jpg",
-  "/images/portfolio/emily_leaf.jpg",
+  "/images/portfolio/dancing.jpg",
 ];
 
 const testimonials = [
@@ -110,7 +113,7 @@ export default function Home() {
           </p>
           <Link href="/about" className="a-button">
             <div className="note">
-              <Image src="/images/me.svg" alt="Get to know me note" width={500} height={500} />
+              <Image src="/images/me.svg" alt="Get to know me note" width={400} height={400} />
             </div>
           </Link>
 
@@ -141,11 +144,11 @@ export default function Home() {
         </div>
         <div className="services-bottom">
           <div className="services-image-holder col-md-6">
-            <Image src="/images/info-mobile.svg" alt="LeahP" width={800} height={800} />
+            <Image src="/images/info-mobile.svg" alt="One image of a couple and another of a lady standing infront of a tree with flowers. With a pink flower overlaying both." width={800} height={800} />
           </div>
 
           <div className="services-image-cluster">
-            <Image src="/images/info.svg" alt="LeahP" width={750} height={750} priority />
+            <Image src="/images/info.svg" alt="Cluster of images with a fern and flower. Two images are couple, and three are one person standing in nature. One image is in a polariod with hand written 'captruing your special moments'." width={750} height={750} priority />
           </div>
 
           <div className="services-content col-md-5">

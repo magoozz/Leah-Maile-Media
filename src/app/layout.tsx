@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ClientProviders from "../components/ClientProviders";
 
 export const metadata: Metadata = {
   title: "Leah Maile Media",
@@ -22,9 +23,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <title>Leah Maile Media</title>
       </head>
       <body>
-      <Navigation />
-        <main>{children}</main>
-        <Footer />
+        <ClientProviders> {}
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+        </ClientProviders>
       </body>
     </html>
   );
