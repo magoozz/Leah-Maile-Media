@@ -1157,6 +1157,7 @@ body {
 }
 
 .contact {
+  border-top: 1px solid #dad7cd;
 
   .flowers {
     position: absolute;
@@ -1175,7 +1176,7 @@ body {
     justify-content: space-evenly;
     background-color: #506248;
     padding-top: 12rem;
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
 
     @media (max-width: 1150px) {
       flex-direction: column;
@@ -1253,7 +1254,7 @@ body {
     textarea {
       width: 100%;
       padding: 0.75rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       border: none;
       box-sizing: border-box;
       background-color: #dad7cd;
@@ -1275,8 +1276,8 @@ body {
       border: 0.1rem solid black;
 
       @media (max-width: 1150px) {
-        width: 75%;
-        margin-left: 12.5%;
+        width: 100%;
+        margin-left: 0;
       }
     }
 
@@ -1301,4 +1302,91 @@ body {
   .parallax-image {
     display: none;
   }
+
+
+  .contact-content {
+    background: linear-gradient(90deg,
+        #e8e3db 50%,
+        #bfbfbf 50%);
+    background-size: 40px 40px;
+    min-height: 100vh;
+    background-attachment: fixed;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    .title {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-weight: bold;
+        font-size: 6rem;
+        font-family: "vogue";
+        text-transform: uppercase;
+      }
+
+      h3 {
+        margin-top: -1rem;
+        font-size: 1.75rem;
+        font-family: "Wonderful Branding", sans-serif;
+      }
+
+      @media (max-width: 800px) {
+        h2 {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+
+        h3 {
+          font-size: 1.25rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .faq-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      margin: 3rem;
+    }
+
+    .faq-item {
+      flex: 1 1 calc(50% - 1rem);
+      box-sizing: border-box;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: #e8e3db;
+      border: 1px solid black;
+
+      h3 {
+        margin-top: 0;
+        font-weight: bold;
+        font-size: 2.5rem;
+        font-family: "vogue";
+        text-transform: uppercase;
+        color: #506248;
+      }
+
+      p {
+        max-width: 40rem;
+        font-family: "Typewriter";
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .faq-item {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+
+  .picture-bar {
+    border-top: 1px solid black;
+  }
+
 }
