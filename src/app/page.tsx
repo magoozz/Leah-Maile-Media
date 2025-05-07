@@ -10,7 +10,6 @@ import Link from "next/link";
 const images = [
   "/images/portfolio/spinny.jpg",
   "/images/portfolio/greta_sunflower.jpg",
-  "/images/portfolio/mk_balloon.jpg",
   "/images/portfolio/clif.jpg",
   "/images/portfolio/redCouple.jpg",
   "/images/portfolio/grad_1.jpg",
