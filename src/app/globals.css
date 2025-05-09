@@ -1305,13 +1305,11 @@ body {
 
 
   .contact-content {
-    background: linear-gradient(90deg,
-        #e8e3db 50%,
-        #bfbfbf 50%);
+    background: #bfbfbf;
     background-size: 40px 40px;
     min-height: 100vh;
     background-attachment: fixed;
-    padding-bottom: 3rem;
+
     padding-top: 3rem;
 
     .title {
@@ -1346,19 +1344,36 @@ body {
 
     .faq-wrapper {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
-      margin: 3rem;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
+    .faq-arrow {
+      display: inline-block;
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+      svg {
+        vertical-align: middle;
+      }
+    
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+    
+
     .faq-item {
-      flex: 1 1 calc(50% - 1rem);
       box-sizing: border-box;
       padding: 1rem;
-      border-radius: 8px;
-      background-color: #e8e3db;
-      border: 1px solid black;
+      border-bottom: 1px solid black;
+      text-align: center;
+
+      h3,
+      p {
+        text-align: center; 
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       h3 {
         margin-top: 0;
@@ -1374,6 +1389,7 @@ body {
         font-family: "Typewriter";
         font-size: 1.5rem;
         color: black;
+        text-align: center;
       }
     }
 
@@ -1384,9 +1400,5 @@ body {
     }
   }
 
-
-  .picture-bar {
-    border-top: 1px solid black;
-  }
 
 }

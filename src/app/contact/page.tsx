@@ -4,9 +4,39 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import { useState } from 'react';
+
+const faqs = [
+  {
+    question: "How does booking work?",
+    answer: "Scroll up to my contact form and send over your inquiry to get started. Within 48 hours, I'll be in touch so we can begin planning your dream session that authentically captures your most special moments!"
+  },
+  {
+    question: "Nervous to be infront of the camera?",
+    answer: "It's completely normal to feel nervous and you're not alone! My job is to help you feel relaxed and comfortable so your true self shines through. We'll chat, laugh, and have fun—you might even forget the camera is there!"
+  },
+  {
+    question: "When to inquire for my session?",
+    answer: "The sooner the better! Gives us more time to dream and plan your session!"
+  },
+  {
+    question: "Do you travel?",
+    answer: "Absolutely! I'm always up for an adventure and I love to travel, so take me anywhere and I'm there!"
+  },
+  {
+    question: "When is my delivery date?",
+    answer: "You can expect a sneak peak within 48 hours and your entire gallery within 14 days. I will let you know based on my current queue."
+  },
+  {
+    question: "What is your photography style?",
+    answer: "My photography style is true to life. Capturing your special moments, big and small, so they last a lifetime. I focus on genuine emotion, natural light, and authentic connection to tell your story in a way that feels timeless and real."
+  }
+];
+
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xjkyzdoo");
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   if (state.succeeded) {
     return <div className="response-message col-md-12">
       <h1>Your special moment is coming up!</h1>
@@ -159,51 +189,44 @@ function ContactForm() {
 
       <div className="contact-content">
         <div className="title">
-          <h2>How this works</h2>
+          <h2>What happens next</h2>
           <h3>Frequetly asked questions...</h3>
         </div>
 
         <div className="faq-wrapper">
-          <div className="faq-item col-md-5">
-            <h3>How does booking work?</h3>
-            <p>
-            Scroll up to my contact form and send over your inquiry to get started. Within 48 hours, I&apos;ll be in touch so we can begin planning your dream session
-            that authentically captures your most special moments!
-            </p>
-          </div>
-          <div className="faq-item col-md-3">
-            <h3>First time infront of the camera?</h3>
-            <p>
-            It&apos;s completely normal to feel nervous and you&apos;re not alone! My job is to help you feel relaxed and comfortable so your true self 
-            shines through. We&apos;ll chat, laugh, and have fun—you might even forget the camera is there!
-            </p>
-          </div>
-          <div className="faq-item col-md-5">
-            <h3>When to inquire for my session?</h3>
-            <p>
-              The sooner the better! Gives us more time to dream and plan your session!
-            </p>
-          </div>
-          <div className="faq-item col-md-5">
-            <h3>Do you travel?</h3>
-            <p>
-            Absolutely! I&apos;m always up for an adventure and I love to travel, so take me anywhere and I&apos;m there!
-            </p>
-          </div>
-          <div className="faq-item col-md-5">
-            <h3>When is my delivery date?</h3>
-            <p>
-              You can expect a sneak peak within 48 hours and your entire gallery within 14 days. I will let you know based on my current queue.
-            </p>
-          </div>
-          <div className="faq-item col-md-5">
-            <h3>What is your photography style?</h3>
-            <p>
-            My photography style is true to life. Capturing your special moments, big and small, so they last a lifetime. I focus on genuine emotion, natural light, and authentic connection to tell 
-            your story in a way that feels timeless and real.
-            </p>
-          </div>
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`faq-item col-12 text-center ${openIndex === index ? 'open' : ''}`}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              style={{ cursor: 'pointer' }}
+            >
+              <h3>
+                {faq.question}
+                <span className={`faq-arrow ${openIndex === index ? 'open' : ''}`}>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </h3>
+
+
+              {openIndex === index && (
+                <p>{faq.answer}</p>
+              )}
+            </div>
+          ))}
         </div>
+
       </div>
 
       <div className="picture-bar">
