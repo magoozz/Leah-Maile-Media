@@ -1450,10 +1450,10 @@ body {
         }
       }
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1400px) {
         top: 50%;
         .contact-icon {
-          width: 200px;
+          width: 250px;
         }
       }
     }
