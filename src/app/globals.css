@@ -1467,7 +1467,7 @@ body {
       left: 50%;
 
       .contact-icon {
-        width: 75px;
+        width: 125px !important;
 
         &:hover {
           transform: none;
