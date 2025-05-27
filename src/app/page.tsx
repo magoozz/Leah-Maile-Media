@@ -126,6 +126,18 @@ export default function Home() {
         <div className="parallax-image"></div>
       </div>
 
+      <div className="mobile-image">
+        <Image
+          className="image"
+          src="/images/portfolio/emily_leaf.jpg"
+          alt="LeahP"
+          width={1920}
+          height={1080}
+          quality={90}
+          layout="responsive"
+        />
+      </div>
+
 
       <div className="services">
         <div className="services-top">

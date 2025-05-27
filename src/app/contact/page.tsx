@@ -187,6 +187,18 @@ function ContactForm() {
         <div className="parallax-image"></div>
       </div>
 
+      <div className="mobile-image">
+        <Image
+          className="image"
+          src="/images/portfolio/mk_balloon.jpg"
+          alt="LeahP"
+          width={1920}
+          height={1080}
+          quality={90}
+          layout="responsive"
+        />
+      </div>
+
       <div className="contact-content">
         <div className="title">
           <h2>What happens next</h2>

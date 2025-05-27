@@ -113,7 +113,7 @@ export default function Experience() {
 
             <div className="portraits">
               <h3>Portraits</h3>
-              <p>Stepping into a new chapter . . . graduating, refreshing your headshots, or simply capturing this moment in your life. tThese sessions are all about celebrating you. No special occasion needed. Just come as you are,
+              <p>Stepping into a new chapter . . . graduating, refreshing your headshots, or simply capturing this moment in your life. These sessions are all about celebrating you. No special occasion needed. Just come as you are,
                 and let&apos;s create photos that feel authentic, confident, and uniquely yours.
               </p>
             </div>
@@ -154,7 +154,7 @@ export default function Experience() {
           <div className="list-item col-md-2">
             <div className="list-text">
               <h3>Contact me</h3>
-              <p>Fill out a contact form & spare no detail!!</p>
+              <p>Fill out a contact form & spare no detail!! p.s. click the evelope below!</p>
             </div>
           </div>
 

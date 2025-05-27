@@ -376,7 +376,6 @@ body {
     background-color: #bfbfbf;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     position: relative;
     flex-wrap: wrap;
     padding: 2rem 2rem 0rem 5rem;
@@ -440,15 +439,24 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 12.5%;
+        margin-left: 40%;
         max-width: 400px;
         height: auto;
         transition: transform 0.2s ease-in-out;
-        margin-top: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+
+        @media (max-width: 790px) {
+          margin-left: 12.5%;
+        }
 
         img {
-          width: 100%;
+          width: 90%;
           height: auto;
+
+          @media (max-width: 790px) {
+            width: 100%;
+          }
         }
 
         &:hover {
@@ -458,7 +466,7 @@ body {
     }
 
     .about-image-cluster {
-      min-width: 500px;
+      max-width: 600px;
       margin-top: -3rem;
     }
 
@@ -676,7 +684,22 @@ body {
     display: none;
   }
 
-  @media (max-width: 790px) {}
+  @media (max-width: 790px) {
+    .image-parallax {
+      display: none;
+    }
+  }
+
+  .mobile-image {
+    display: none;
+
+    @media (max-width: 790px) {
+      display: block;
+      height: 40vw;
+      overflow: hidden;
+      border-bottom: 1px solid black;
+    }
+  }
 
   .testimonials {
     background: linear-gradient(90deg,
@@ -1452,6 +1475,7 @@ body {
 
       @media (max-width: 1400px) {
         top: 50%;
+
         .contact-icon {
           width: 250px;
         }
@@ -1572,7 +1596,7 @@ body {
 
     @media (max-width: 1150px) {
       margin-top: 3rem;
-
+      width: 20rem;
     }
 
     .title {
@@ -1651,6 +1675,22 @@ body {
     display: none;
   }
 
+  @media (max-width: 790px) {
+    .image-parallax {
+      display: none;
+    }
+  }
+
+  .mobile-image {
+    display: none;
+
+    @media (max-width: 790px) {
+      display: block;
+      height: 40vw;
+      overflow: hidden;
+      border-bottom: 1px solid black;
+    }
+  }
 
   .contact-content {
     background: #bfbfbf;
