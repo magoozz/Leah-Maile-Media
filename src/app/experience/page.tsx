@@ -2,7 +2,6 @@
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import Image from 'next/image';
 import { useEffect, useState } from "react";
-import Link from 'next/link';
 
 const images = [
   "/images/experience/emily_girls.jpg",
@@ -108,8 +107,8 @@ export default function Experience() {
           <div className="services-content col-12 col-md-5">
             <div className="couples">
               <h3>Couples & Families</h3>
-              <p>Whether it's just the two of you, dating, engaged, or marking another year of love, or your family is growing with new little faces and meaningful milestones, these sessions are about connection. From quiet moments to joyful chaos,
-                from maternity to newborn to the everyday in-between, I'm here to capture the love that fills your life.</p>
+              <p>Whether it&apos;s just the two of you, dating, engaged, or marking another year of love, or your family is growing with new little faces and meaningful milestones, these sessions are about connection. From quiet moments to joyful chaos,
+                from maternity to newborn to the everyday in-between, I&apos;m here to capture the love that fills your life.</p>
             </div>
 
             <div className="portraits">
