@@ -190,8 +190,6 @@ export default function Experience() {
           layout="fill"
           objectFit="cover"
           objectPosition="center 65%"
-          width={400}
-          height={300}
           priority={true}
         />
         <div
