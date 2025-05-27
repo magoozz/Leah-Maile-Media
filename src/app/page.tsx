@@ -134,7 +134,7 @@ export default function Home() {
               Lifestyle photographer based in WA state
             </h2>
             <h3>
-              Love, graduation, teams, and everything in between!
+              Love, portraits, teams, and everything in between!
             </h3>
           </div>
           <div className="flower">

@@ -830,6 +830,7 @@ body {
 
       h1 {
         font-size: 5rem;
+        color: #fadadd;
         font-weight: bold;
         font-family: "vogue";
 
@@ -841,6 +842,7 @@ body {
 
       h2 {
         margin-bottom: 1.5rem;
+        color: #fadadd;
         font-family: "Wonderful Branding";
         padding: 0 2.5rem;
 
@@ -970,7 +972,7 @@ body {
 
 
   .work {
-    background-color: #fadadd;
+    background-color: #bfbfbf;
     padding-top: 3rem;
     padding-bottom: 1rem;
 
@@ -981,12 +983,14 @@ body {
     }
 
     .check-out {
+      border-top: 1px solid black;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 4rem;
+      margin-top: 1rem;
 
       h2 {
+        margin-top: 2rem;
         font-size: 5rem;
         font-weight: bold;
         font-family: "vogue";
@@ -1015,7 +1019,7 @@ body {
 
         .con-button {
           transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           z-index: 10;
 
           @media (max-width: 910px) {
@@ -1126,9 +1130,296 @@ body {
 
 /* EXPEREINCE */
 .experience {
-  padding-top: 10rem;
-  height: 100vh;
+  padding-top: 8rem;
   text-align: center;
+  position: relative;
+
+  @media (max-width: 1600px) {
+    padding-top: 5rem;
+  }
+
+  .intro {
+    text-align: center;
+
+    @media (max-width: 767px) {
+      margin-bottom: 2rem;
+    }
+
+    .flowers {
+      display: none;
+      
+      @media (max-width: 480px) {
+
+        position: absolute;
+        top: 5vh;
+        right: 2vw;
+        width: clamp(100px, 11vw, 180px);
+        height: clamp(100px, 11vw, 180px);
+        object-fit: contain;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #506248;
+      font-family: "Wonderful Branding";
+      margin-bottom: 5rem;
+      text-align: center;
+
+      @media (max-width: 1165px) {
+        font-size: 2rem;
+      }
+      @media (max-width: 1600px) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-family: "Typewriter";
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @media (max-width: 1363px) {
+        margin-top: 0;
+        padding: 0 1rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+
+    .mobile-img {
+      margin-top: 1rem;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .left-img,
+    .right-img {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .content {
+      text-align: left;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+
+
+  .services-container {
+    background-color: #506248;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 3rem;
+    position: relative;
+
+    .flowers {
+      position: absolute;
+      top: 2vh;
+      right: 2vw;
+      width: clamp(100px, 11vw, 180px);
+      height: clamp(100px, 11vw, 180px);
+      object-fit: contain;
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    .services-title {
+      h2 {
+        font-size: 5rem;
+        color: #fadadd;
+        font-family: "vogue";
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        text-transform: uppercase;
+
+        @media (max-width: 790px) {
+          font-size: 4rem;
+        }
+      }
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @media (max-width: 790px) {
+        flex-direction: column-reverse;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+      .services-content {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 790px) {
+          align-items: center;
+        }
+
+        .couples,
+        .portraits,
+        .events {
+          color: #dad7cd;
+          text-align: left;
+
+          h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: "vogue";
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+          }
+
+          p {
+            border-top: 2.25px solid #fadadd;
+            font-size: 1.2rem;
+            font-family: "Typewriter";
+
+            @media (max-width: 790px) {
+              font-size: 1rem;
+            }
+          }
+
+          @media (max-width: 790px) {
+
+            h3 {
+              font-size: 1.75rem;
+            }
+
+            p {
+              font-size: .75rem;
+            }
+          }
+        }
+
+        .couples,
+        .portraits {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .services-images {
+        border: 2px solid #fadadd;
+        padding: 0.75rem;
+
+        @media (max-width: 790px) {
+          margin-bottom: 2rem;
+        }
+
+        .image-container {
+          position: relative;
+          width: 100%;
+          height: 700px;
+          overflow: hidden;
+
+          @media (max-width: 790px) {
+            height: 500px;
+          }
+        }
+
+        .transition-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+
+        .transition-image.active {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .process {
+    background: linear-gradient(90deg,
+        #e8e3db 50%,
+        #bfbfbf 50%);
+    background-size: 40px 40px;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+
+    .the {
+      font-size: 3rem;
+      color: #506248;
+      font-family: "Wonderful Branding";
+      margin-right: 12rem;
+      margin-bottom: -2rem;
+    }
+
+    .process-word {
+      font-size: 4rem;
+      color: #506248;
+      font-weight: bold;
+      font-family: "vogue";
+      text-transform: uppercase;
+      margin-top: -0.5rem;
+    }
+
+    .process-list {
+      margin: 2rem;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 1483px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .list-item {
+        background-color: #fadadd;
+        border: 2px solid #506248;
+        list-style: none;
+        width: 22rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .list-text {
+          max-width: 17rem;
+        }
+
+        h3 {
+          font-size: 1.75rem;
+          font-weight: bold;
+          font-family: "vogue";
+          text-transform: uppercase;
+          margin-top: 0.5rem;
+          color: #506248;
+        }
+
+        p {
+          font-family: "Typewriter";
+        }
+      }
+    }
+
+  }
+
 }
 
 
@@ -1214,7 +1505,8 @@ body {
 
   .form-img {
     img {
-      border: 0.1rem solid black;
+      border: 2px solid #fadadd;
+      padding: 0.75rem;
     }
   }
 
@@ -1352,15 +1644,16 @@ body {
       display: inline-block;
       margin-left: 0.5rem;
       transition: transform 0.3s ease;
+
       svg {
         vertical-align: middle;
       }
-    
+
       &.open {
         transform: rotate(180deg);
       }
     }
-    
+
 
     .faq-item {
       box-sizing: border-box;
@@ -1370,7 +1663,7 @@ body {
 
       h3,
       p {
-        text-align: center; 
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
@@ -1385,7 +1678,6 @@ body {
       }
 
       p {
-        max-width: 40rem;
         font-family: "Typewriter";
         font-size: 1.5rem;
         color: black;
