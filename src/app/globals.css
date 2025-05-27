@@ -1147,7 +1147,7 @@ body {
 
     .flowers {
       display: none;
-      
+
       @media (max-width: 480px) {
 
         position: absolute;
@@ -1169,6 +1169,7 @@ body {
       @media (max-width: 1165px) {
         font-size: 2rem;
       }
+
       @media (max-width: 1600px) {
         margin-bottom: 2rem;
       }
@@ -1193,7 +1194,7 @@ body {
 
     .mobile-img {
       margin-top: 1rem;
-  
+
       img {
         max-width: 100%;
         height: auto;
@@ -1420,7 +1421,62 @@ body {
 
   }
 
+  .experience-contact {
+    height: 35vw;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid black;
+
+    .background-image {
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .contact-toggle {
+      position: absolute;
+      z-index: 2;
+      top: 40%;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      .contact-icon {
+        width: 400px;
+        height: auto;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      @media (max-width: 1000px) {
+        top: 50%;
+        .contact-icon {
+          width: 200px;
+        }
+      }
+    }
+
+  }
+
+
+  @media (max-width: 768px) {
+    .contact-toggle {
+      top: 10%;
+      left: 50%;
+
+      .contact-icon {
+        width: 75px;
+
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+  }
 }
+
 
 
 /* CONTACT FORM */

@@ -2,6 +2,7 @@
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import Image from 'next/image';
 import { useEffect, useState } from "react";
+import Link from 'next/link';
 
 const images = [
   "/images/experience/emily_girls.jpg",
@@ -13,16 +14,35 @@ const images = [
 ];
 
 export default function Experience() {
-  const [currentImage, setCurrentImage] = useState(0); // Declare the missing state for current image
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Change image every 4 seconds
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Listen for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 8500); // Change every 4 seconds
+    }, 8500);
 
     return () => clearInterval(imageInterval);
-  }, []);
+  }, [images.length]);
 
 
   return (
@@ -32,7 +52,7 @@ export default function Experience() {
           <div className="left-img col-md-3 d-none d-md-block">
             <Image
               src="/images/experience/left.svg"
-              alt="LeahP"
+              alt="image of a girl under a cherry blossom tree, poloriod of two graduating friends holding hands, image of boy crouched in grass"
               layout="intrinsic"
               width={500}
               height={500}
@@ -40,8 +60,8 @@ export default function Experience() {
           </div>
 
           <div className="flowers">
-          <Image src="/images/decor/three-flower-cream.svg" alt="LeahP" width={225} height={225} />
-        </div>
+            <Image src="/images/decor/three-flower-cream.svg" alt="LeahP" width={225} height={225} />
+          </div>
 
           <div className="content col-12 col-md-6 text-center">
             <h1>All things lifestyle</h1>
@@ -55,7 +75,7 @@ export default function Experience() {
           <div className="mobile-img d-block d-md-none w-100">
             <Image
               src="/images/experience/mobile.svg"
-              alt="Mobile Experience"
+              alt="Gallery of images with couples, families, friends, and solo images"
               layout="responsive"
               width={1600}
               height={900}
@@ -65,7 +85,7 @@ export default function Experience() {
           <div className="right-img col-md-3 d-none d-md-block">
             <Image
               src="/images/experience/right.svg"
-              alt="LeahP"
+              alt="a polariod of a couple holding a baby, an image of a girl on a stool holding flowers, and an image of two girls simling at a sorority event"
               layout="intrinsic"
               width={500}
               height={500}
@@ -77,9 +97,9 @@ export default function Experience() {
 
       <div className="services-container">
         <div className="flowers">
-          <Image src="/images/decor/three-flower-cream.svg" alt="LeahP" width={225} height={225} />
+          <Image src="/images/decor/three-flower-cream.svg" alt="Cluster of three cream flowers" width={225} height={225} />
         </div>
-        
+
         <div className="services-title">
           <h2>Services</h2>
         </div>
@@ -160,6 +180,34 @@ export default function Experience() {
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <div className="experience-contact">
+        <Image
+          className="background-image"
+          src="/images/experience/contact-img.jpg"
+          alt="blurred photo of grass with silloutte of a couple in the background"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center 65%"
+        />
+        <div
+          className="contact-toggle"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <img
+            src={
+              isMobile
+                ? '/images/experience/open.svg'
+                : isHovered
+                  ? '/images/experience/open.svg'
+                  : '/images/experience/closed.svg'
+            }
+            alt="Contact Icon"
+            className="contact-icon"
+          />
         </div>
       </div>
     </div>
