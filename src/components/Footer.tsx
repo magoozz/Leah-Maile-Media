@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
     // State to store the current year
