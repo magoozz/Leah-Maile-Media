@@ -798,8 +798,20 @@ body {
   padding-bottom: 2rem;
   border-top: 1.5px solid black;
 
+  .footer-items {
+    display: flex;
+    align-items: center;
+  }
+
   .stamp {
     margin-top: 2rem;
+  }
+
+  .polaroid {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .footer-content {

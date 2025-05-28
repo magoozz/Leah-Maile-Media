@@ -27,20 +27,57 @@ export default function Footer() {
                         />
                     </Link>
                 </div>
+
+                <div className="polaroid col-md-2">
+                    <Link href="/about">
+                        <Image
+                            src="/images/footer/meet.svg"
+                            alt="'Meet Leah' with image of leah"
+                            width={250}
+                            height={250}
+                        />
+                    </Link>
+                </div>
+
+                <div className="polaroid col-md-2">
+                    <Link href="/experience">
+                        <Image
+                            src="/images/footer/experience.svg"
+                            alt="'All about the experience' with image of girl in a flower field"
+                            width={250}
+                            height={250}
+                        />
+                    </Link>
+                </div>
+
+                <div className="polaroid col-md-2">
+                    <Link href="/portfolio">
+                        <Image
+                            src="/images/footer/portfolio.svg"
+                            alt="'view portfolio' with image of girl with graduation cap with fall leaves"
+                            width={250}
+                            height={250}
+                        />
+                    </Link>
+                </div>
+
+                <div className="polaroid col-md-2">
+                    <Link href="/contact">
+                        <Image
+                            src="/images/footer/contact.svg"
+                            alt="'Book your shoot!' with image of woman holding baby up smiling at baby"
+                            width={250}
+                            height={250}
+                        />
+                    </Link>
+                </div>
+
             </div>
             <div className="footer-content">
                 <div className="footer-content-top">
                     <p>&copy; {currentYear || "Loading..."} Leah Maile Media. All Rights Reserved.</p>
-                    <a
-                        href="https://www.instagram.com/leahmailes/?igsh=OHJjaWxlNzBmZDNu#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="instagram-mobile"
-                    >
-                        <FaInstagram size={30} className="ig-icon" />
-                    </a>
                 </div>
-                <p>Developed by <Link href="https://megan-bartlett.vercel.app/" target="_blank" rel="noopener noreferrer"> Megan Bartlett</Link></p>
+                <p>Developed by <Link href="https://megan-bartlett.vercel.app/" target="_blank" rel="noopener noreferrer"> Magooz</Link></p>
             </div>
         </footer>
     );

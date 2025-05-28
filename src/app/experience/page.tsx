@@ -1,6 +1,7 @@
 "use client"
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from "react";
 
 const images = [
@@ -182,6 +183,7 @@ export default function Experience() {
         </div>
       </div>
 
+
       <div className="experience-contact">
         <Image
           className="background-image"
@@ -192,23 +194,27 @@ export default function Experience() {
           objectPosition="center 65%"
           priority={true}
         />
-        <div
-          className="contact-toggle"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <img
-            src={
-              isMobile
-                ? '/images/experience/open.svg'
-                : isHovered
+
+        <Link href="/contact" passHref legacyBehavior>
+          <a
+            className="contact-toggle"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <img
+              src={
+                isMobile
                   ? '/images/experience/open.svg'
-                  : '/images/experience/closed.svg'
-            }
-            alt="Contact Icon"
-            className="contact-icon"
-          />
-        </div>
+                  : isHovered
+                    ? '/images/experience/open.svg'
+                    : '/images/experience/closed.svg'
+              }
+              alt="Contact Icon"
+              className="contact-icon"
+            />
+          </a>
+        </Link>
+
       </div>
     </div>
   );
